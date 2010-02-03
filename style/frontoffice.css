@@ -1,0 +1,12 @@
+ul.share-list{
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+}
+ul.share-list li{
+	display: inline;
+	padding: 0 3px;
+	margin: 0;
+}

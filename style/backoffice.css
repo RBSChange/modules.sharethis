@@ -1,0 +1,9 @@
+treechildren::-moz-tree-image(modules_sharethis_bookmarksite){
+	list-style-image: url(/icons/small/share-on-website.png) ;
+}
+treechildren::-moz-tree-image(modules_sharethis_blogsite){
+	list-style-image: url(/icons/small/share-on-blog.png) ;
+}
+treechildren::-moz-tree-image(modules_sharethis_internallink){
+	list-style-image: url(/icons/small/share-special.png) ;
+}

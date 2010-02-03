@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+ 	<entity id="edition-form-title">
+		<locale lang="fr">propriétés d'un lien interne</locale>
+		<locale lang="en">properties of an internal link</locale>
+	</entity>
+	<entity id="document-name">
+		<locale lang="fr">lien interne</locale>
+		<locale lang="en">internal link</locale>
+	</entity>
+	<entity id="label">
+		<locale lang="fr">libellé</locale>
+		<locale lang="en">label</locale>
+	</entity>
+	<entity id="label-help">
+		<locale lang="fr">libellé du lien interne, utilisé dans l'interface d'administration uniquement.</locale>
+		<locale lang="en">label of the internal link for the administration interface.</locale>
+	</entity>
+	<entity id="icon">
+		<locale lang="fr">icône</locale>
+		<locale lang="en">icon</locale>
+	</entity>
+	<entity id="icon-help">
+		<locale lang="fr">icône utilisé par les blocs d'affichage pour représenter le lien.</locale>
+		<locale lang="en">icon used to represent the internal link in display blocks.</locale>
+	</entity>
+	<entity id="pagetag">
+		<locale lang="fr">étiquette</locale>
+		<locale lang="en">tag</locale>
+	</entity>
+	<entity id="pagetag-help">
+		<locale lang="fr">étiquette de la page liée.</locale>
+		<locale lang="en">tag of the linked page.</locale>
+	</entity>
+	<entity id="onclickPattern">
+		<locale lang="fr">modèle de l'onclick</locale>
+		<locale lang="en">onclick model</locale>
+	</entity>
+	<entity id="onclickPattern-help">
+		<locale lang="fr">modèle sur lequel l'attribut onclick du lien sera construit. Deux variables sont disponibles : {PAGE_TITLE} et {PAGE_URL}.</locale>
+		<locale lang="en">model used to generate the link's onclick attribute. Two variables are available : {PAGE_TITLE} and {PAGE_URL}.</locale>
+	</entity>
+	<entity id="messageName">
+		<locale lang="fr">variable message</locale>
+		<locale lang="en">message variable</locale>
+	</entity>
+	<entity id="messageName-help">
+		<locale lang="fr">nom de la variable de l'URL contenant le message.</locale>
+		<locale lang="en">name of the URL parameter containing the message.</locale>
+	</entity>
+	<entity id="messagePattern">
+		<locale lang="fr">modèle du message</locale>
+		<locale lang="en">message model</locale>
+	</entity>
+	<entity id="messagePattern-help">
+		<locale lang="fr">modèle sur lequel le message sera construit. Deux variables sont disponibles : {PAGE_TITLE} et {PAGE_URL}</locale>
+		<locale lang="en">model used to generate the link's message. Two variables are available : {PAGE_TITLE} and {PAGE_URL}.</locale>
+	</entity>
+	<entity id="shortenurls">
+		<locale lang="fr">raccourcir l'URL</locale>
+		<locale lang="en">shorten URL</locale>
+	</entity>
+	<entity id="shortenurls-help">
+		<locale lang="fr">choisissez « oui » pour générer des URLs raccourcies vers les pages. Ceci est utile pour les plateformes où la taille du message est limitée (ex : Twitter), dans les autres cas, choisir « non ».</locale>
+		<locale lang="en">choose « yes » to generate short URL for the pages. It is useful for online services limiting the size of posted messages (such as Twitter).</locale>
+	</entity>
+</localization>

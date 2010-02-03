@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions extends="generic">
+	<action name="createBookmarksite">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_sharethis_bookmarksite', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+	<action name="createBlogsite">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_sharethis_blogsite', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+	<action name="createInternallink">
+		<parameter name="listWidget" />
+		<body><![CDATA[
+			this.createDocumentEditor('modules_sharethis_internallink', listWidget.getSelectedItems()[0].id);
+		]]></body>
+	</action>
+</actions>

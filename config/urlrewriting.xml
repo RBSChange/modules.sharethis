@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlrewriting>
+	<rules>
+		<rule redirection="sharethis/ShareUrl" lang="fr">
+			<template>/partage-de-lien/site-$cmpref.html</template>
+			<parameters>
+				<globalParameter name="cmpref" format="[0-9]+" />
+			</parameters>
+		</rule>
+	</rules>
+</urlrewriting>

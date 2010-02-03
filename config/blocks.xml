@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<blocks>
+	<block type="modules_sharethis_sharepage" display="" icon="sharethis" label="&amp;modules.sharethis.bo.blocks.Sharepage;" afterAll="true" />
+</blocks>

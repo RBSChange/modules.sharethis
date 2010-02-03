@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<localization>
+	<entity id="send-email">
+		<locale lang="fr">page de partage par e-mail</locale>
+		<locale lang="en">share by e-mail page</locale>
+	</entity>
+</localization>

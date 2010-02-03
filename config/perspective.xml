@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<perspective>
+	<models>
+		<model name="modules_generic/rootfolder">
+			<children>
+				<child model="modules_sharethis/internallink" />
+				<child model="modules_sharethis/blogsite" />
+				<child model="modules_sharethis/bookmarksite" />
+			</children>
+			<drops>
+				<drop model="modules_sharethis/blogsite" action="move" />
+				<drop model="modules_sharethis/internallink" action="move" />
+				<drop model="modules_sharethis/bookmarksite" action="move" />
+			</drops>
+			<contextactions>
+				<contextaction name="edit" />
+				<groupactions name="create_">
+					<contextaction name="createBookmarksite" />
+					<contextaction name="createBlogsite" />
+					<contextaction name="createInternallink" />
+				</groupactions>
+			</contextactions>
+		</model>
+		<model name="modules_sharethis/bookmarksite">
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<contextaction name="deactivated" />
+				<contextaction name="reactivate" />
+			</contextactions>
+		</model>
+		<model name="modules_sharethis/blogsite">
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<contextaction name="deactivated" />
+				<contextaction name="reactivate" />
+			</contextactions>
+		</model>
+		<model name="modules_sharethis/internallink">
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<contextaction name="deactivated" />
+				<contextaction name="reactivate" />
+			</contextactions>
+		</model>
+	</models>
+	<toolbar>
+		<toolbarbutton name="edit" />
+		<toolbarbutton name="delete" />
+		<toolbarbutton name="deactivated" />
+		<toolbarbutton name="reactivate" />
+	</toolbar>
+	<actions>
+		<action name="refresh" single="true" icon="refresh" label="&amp;modules.uixul.bo.actions.Refresh;" />
+		<action name="delete" permission="Delete" icon="delete" label="&amp;modules.uixul.bo.actions.Delete;" />
+		<action name="edit" single="true" permission="Load" icon="edit" label="&amp;modules.uixul.bo.actions.Edit;" />
+		<action name="deactivated" permission="Deactivated" icon="deactivated" label="&amp;modules.uixul.bo.actions.Deactivate;" />
+		<action name="reactivate" permission="ReActivate" icon="reactivate" label="&amp;modules.uixul.bo.actions.ReActivate;" />
+		<action name="create_" actions="createBookmarksite,createBlogsite,createInternallink" icon="add" />
+		<action name="createBookmarksite" group="create_" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Bookmarksite;" />
+		<action name="createBlogsite" group="create_" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Blogsite;" />
+		<action name="createInternallink" group="create_" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Internallink;" />
+	</actions>
+</perspective>

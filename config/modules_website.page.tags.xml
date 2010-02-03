@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tags extends="generic">
+	<tag label="&amp;modules.sharethis.bo.tags.Send-email;" icon="mail">contextual_website_website_modules_sharethis_send-email</tag>
+</tags>
