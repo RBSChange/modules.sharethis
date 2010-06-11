@@ -7,7 +7,7 @@
 		<documentRef type="modules_form/form" id="form1" byLabel="Partager un lien" />
 	</systemfolder>
 
-	<website byTag="default_modules_website_default-website" template="tplFour">
+	<website byTag="default_modules_website_default-website" template="webfactory/tplTwo">
 		<topic byLabel="Outils">
 			<page byTag="contextual_website_website_modules_sharethis_send-email" label="Partager un lien" indexingstatus="false">
 				<changecontent for="content-block">
