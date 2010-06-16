@@ -1,4 +1,4 @@
-<ul class="share-list" tal:condition="links">
+<ul tal:condition="links">
 	<li tal:repeat="link links">
 		<tal:block tal:define="onclick php:link.getShareCurrentOnclick(currentUrl, currentTitle) ; href php:htmlentities(link.getShareCurrentUrlIndirection(currentUrl, currentTitle), ENT_COMPAT, 'utf-8')" tal:condition="href">
 			<a tal:condition="onclick" class="link" href="${href}" onclick="${onclick}" rel="nofollow"><img tal:condition="link/getIcon" change:media="document link/getIcon" /><tal:block tal:condition="not: link/getIcon" tal:content="link/getLabel" /></a>
