@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <localization>
-	<entity id="edition-form-title">
-		<locale lang="fr">propriétés d'un site de type « blog »</locale>
-		<locale lang="en">properties of a  « blog » site</locale>
-	</entity>
 	<entity id="document-name">
 		<locale lang="fr">site de type « blog »</locale>
 		<locale lang="en">« blog » site</locale>

@@ -4,12 +4,10 @@
 		<locale lang="fr">partage de liens</locale>
 		<locale lang="en">share links</locale>
 	</entity>
-
 	<entity id="tree-root-name">
 		<locale lang="fr">partage de liens</locale>
 		<locale lang="en">share links</locale>
 	</entity>
-
 	<entity id="system-folder-name">
 		<locale lang="fr">partage de liens</locale>
 		<locale lang="en">share links</locale>
