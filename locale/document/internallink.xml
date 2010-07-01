@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <localization>
- 	<entity id="edition-form-title">
-		<locale lang="fr">propriétés d'un lien interne</locale>
-		<locale lang="en">properties of an internal link</locale>
-	</entity>
 	<entity id="document-name">
 		<locale lang="fr">lien interne</locale>
 		<locale lang="en">internal link</locale>
