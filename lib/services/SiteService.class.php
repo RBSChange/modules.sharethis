@@ -63,7 +63,7 @@ class sharethis_SiteService extends sharethis_LinkService
 	{
 		if ($document->getShortenUrls())
 		{
-			$currentUrl = sharethis_ShortenUrlService::getInstance()->shortenUrl($currentUrl);
+			$currentUrl = website_ShortenUrlService::getInstance()->shortenUrl($currentUrl);
 		}
 		return $document->getDocumentService()->generateShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator);
 	}

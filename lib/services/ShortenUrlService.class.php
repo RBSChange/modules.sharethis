@@ -2,6 +2,7 @@
 /**
  * sharethis_ShortenUrlService
  * @package modules.sharethis.lib.services
+ * @deprecated use website_ShortenUrlService
  */
 class sharethis_ShortenUrlService extends BaseService
 {
@@ -24,18 +25,10 @@ class sharethis_ShortenUrlService extends BaseService
 	}
 	
 	/**
-	 * @param String $url
-	 * @return String
+	 * @deprecated use website_ShortenUrlService::shortenUrl
 	 */
 	public function shortenUrl($url)
 	{
-		// TODO: handle other services to shorten the urls.
-		$httpClient = HTTPClientService::getInstance()->getNewHTTPClient();
-		$shortUrl = $httpClient->get('http://tinyurl.com/api-create.php?url=' . urlencode($url));
-		if (!$shortUrl)
-		{
-			$shortUrl = $url;
-		}
-		return $shortUrl;
+		return website_ShortenUrlService::getInstance()->shortenUrl($url);
 	}
 }
