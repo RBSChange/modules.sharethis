@@ -54,34 +54,34 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @return String
 	 */
-	public function getShareCurrentUrlIndirection($document, $currentUrl, $currentTitle)
+	public function getShareUrlIndirection($document, $url, $title)
 	{
-		return LinkHelper::getActionUrl('sharethis', 'ShareUrl', array('cmpref' => $document->getId(), 'url' => $currentUrl, 'title' => $currentTitle));
+		return LinkHelper::getActionUrl('sharethis', 'ShareUrl', array('cmpref' => $document->getId(), 'url' => $url, 'title' => $title));
 	}
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @param String $varSeparator
 	 * @return String
 	 */
-	public function getShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator = '&amp;')
+	public function getShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
 		return null;
 	}
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @return String
 	 */
-	public function getShareCurrentOnclick($document, $currentUrl, $currentTitle)
+	public function getShareOnclick($document, $url, $title)
 	{
 		return null;
 	}
@@ -93,6 +93,18 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	{
 		$query = $this->createQuery()->add(Restrictions::published());
 		$query->add(Restrictions::descendentOf(ModuleService::getInstance()->getRootFolderId('sharethis')));
+		return $query->find();
+	}
+	
+	/**
+	 * @param sharethis_persistentdocument_group $group
+	 * @return sharethis_persistentdocument_site[]
+	 */
+	public function getPublishedBoSortedByGroup($group)
+	{
+		$query = $this->createQuery()->add(Restrictions::published());
+		$query->add(Restrictions::descendentOf(ModuleService::getInstance()->getRootFolderId('sharethis')));
+		$query->add(Restrictions::eq('group', $group));
 		return $query->find();
 	}
 	
@@ -118,5 +130,31 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 		// Remove the not-replaced elements.
 		$string = preg_replace('#\{(.*)\}#', '-', $string);
 		return $string;
+	}
+	
+	// Depreacted
+	
+	/**
+	 * @deprecated (will be removed in 4.0) use getShareUrlIndirection
+	 */
+	public function getShareCurrentUrlIndirection($document, $url, $title)
+	{
+		return $this->getShareUrlIndirection($document, $url, $title);
+	}
+
+	/**
+	 * @deprecated (will be removed in 4.0) use getShareUrl
+	 */
+	public function getShareCurrentUrl($document, $url, $title, $varSeparator = '&amp;')
+	{
+		return $this->getShareUrl($document, $url, $title, $varSeparator);
+	}
+
+	/**
+	 * @deprecated (will be removed in 4.0) use getShareOnclick
+	 */
+	public function getShareCurrentOnclick($document, $url, $title)
+	{
+		return $this->getShareOnclick($document, $url, $title);
 	}
 }

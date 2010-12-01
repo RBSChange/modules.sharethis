@@ -12,7 +12,7 @@ class sharethis_ShareUrlAction extends f_action_BaseAction
 	public function _execute($context, $request)
 	{
 		$link = DocumentHelper::getDocumentInstance($request->getParameter('cmpref'));
-		$url = $link->getShareCurrentUrl($request->getParameter('url'), $request->getParameter('title'), '&');
+		$url = $link->getShareUrl($request->getParameter('url'), $request->getParameter('title'), '&');
 		if ($url !== null)
 		{
 			HttpController::getInstance()->redirectToUrl($url);

@@ -54,19 +54,19 @@ class sharethis_BookmarksiteService extends sharethis_SiteService
 	
 	/**
 	 * @param sharethis_persistentdocument_bookmarksite $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @param String $varSeparator
 	 * @return String
 	 */
-	protected function generateShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator = '&amp;')
+	protected function generateShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
-		$replacements = array('PAGE_TITLE' => $currentTitle, 'PAGE_URL' => $currentUrl);
+		$replacements = array('PAGE_TITLE' => $title, 'PAGE_URL' => $url);
 		
 		$parameters = array();
 		if ($document->getUrlName())
 		{
-			$parameters[] = $document->getUrlName() . '=' . urlencode($currentUrl);
+			$parameters[] = $document->getUrlName() . '=' . urlencode($url);
 		}
 		if ($document->getTitleName() && $document->getTitlePattern())
 		{

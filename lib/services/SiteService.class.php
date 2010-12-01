@@ -54,28 +54,28 @@ class sharethis_SiteService extends sharethis_LinkService
 
 	/**
 	 * @param sharethis_persistentdocument_site $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @param String $varSeparator
 	 * @return String
 	 */
-	public function getShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator = '&amp;')
+	public function getShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
 		if ($document->getShortenUrls())
 		{
-			$currentUrl = website_ShortenUrlService::getInstance()->shortenUrl($currentUrl);
+			$url = website_ShortenUrlService::getInstance()->shortenUrl($url);
 		}
-		return $document->getDocumentService()->generateShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator);
+		return $document->getDocumentService()->generateShareUrl($document, $url, $title, $varSeparator);
 	}
 	
 	/**
 	 * @param sharethis_persistentdocument_site $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @param String $varSeparator
 	 * @return String
 	 */
-	protected function generateShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator = '&amp;')
+	protected function generateShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
 		throw new Exception('No implementation to generate URL!');
 	}

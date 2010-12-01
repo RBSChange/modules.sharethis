@@ -1,9 +1,9 @@
 <?php
 /**
- * sharethis_BlockSharepageAction
+ * sharethis_BlockShareurlAction
  * @package modules.sharethis.lib.blocks
  */
-class sharethis_BlockSharepageAction extends website_BlockAction
+class sharethis_BlockShareurlAction extends website_BlockAction
 {
 	/**
 	 * @return array or null
@@ -19,7 +19,7 @@ class sharethis_BlockSharepageAction extends website_BlockAction
 	 */
 	public function getCacheKeyParameters($request)
 	{
-		return array($_SERVER['REQUEST_URI']);
+		return array($this->findLocalParameterValue('url'), $this->findLocalParameterValue('title'));
 	}
 	
 	/**
@@ -29,15 +29,20 @@ class sharethis_BlockSharepageAction extends website_BlockAction
 	 * @param f_mvc_Response $response
 	 * @return String
 	 */
-	function execute($request, $response)
+	public function execute($request, $response)
 	{
+		if ($this->isInBackoffice())
+		{
+			return website_BlockView::NONE;
+		}
+	
 		$group = sharethis_GroupService::getInstance()->getByCode($this->getConfiguration()->getGroupCode());
 		$links = sharethis_LinkService::getInstance()->getPublishedBoSortedByGroup($group);
 		$request->setAttribute('links', $links);
 		
-		$domain = website_WebsiteModuleService::getInstance()->getCurrentWebsite()->getDomain();
-		$request->setAttribute('currentUrl', 'http://' . $domain . LinkHelper::getCurrentUrl());
-		$request->setAttribute('currentTitle', $this->getPage()->getTitle());
+		$request->setAttribute('url', $this->findLocalParameterValue('url'));
+		$request->setAttribute('title', $this->findLocalParameterValue('title'));
+		
 		return website_BlockView::SUCCESS;
 	}
 }

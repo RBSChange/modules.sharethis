@@ -1,20 +1,2 @@
-<ul tal:condition="links">
-	<li tal:repeat="link links">
-		<tal:block tal:define="onclick php:link.getShareCurrentOnclick(currentUrl, currentTitle) ; href php:htmlentities(link.getShareCurrentUrlIndirection(currentUrl, currentTitle), ENT_COMPAT, 'utf-8')" tal:condition="href">
-			<a tal:condition="onclick" class="link" href="${href}" onclick="${onclick}" rel="nofollow"><img tal:condition="link/getIcon" change:media="document link/getIcon" /><tal:block tal:condition="not: link/getIcon" tal:content="link/getLabel" /></a>
-			<a tal:condition="not: onclick" class="link" href="${href}" rel="nofollow"><img tal:condition="link/getIcon" change:media="document link/getIcon" /><tal:block tal:condition="not: link/getIcon" tal:content="link/getLabel" /></a>
-		</tal:block>
-	</li>
-</ul>
-<script type="text/javascript">
-//<![CDATA[
-jQuery(document).ready(function () {
-	var pageTitle = encodeURIComponent(window.document.title);
-	jQuery('.share-list a').each(function (index) {
-		var node = jQuery(this);
-		var url = node.attr('href').replace(/&title=.*/, '&title='+pageTitle);
-		node.attr('href', url);
-	});
-});
-//]]>
-</script>
+<script change:javascript="head 'modules.sharethis.lib.js.sharepage'"></script>
+<tal:block change:include="module 'sharethis'; template 'Sharethis-Inc-Links-List'; type 'html'; links links; url currentUrl; title currentTitle" />

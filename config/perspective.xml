@@ -6,6 +6,7 @@
 				<child model="modules_sharethis/internallink" />
 				<child model="modules_sharethis/blogsite" />
 				<child model="modules_sharethis/bookmarksite" />
+				<child model="modules_sharethis/group" />
 			</children>
 			<drops>
 				<drop model="modules_sharethis/blogsite" action="move" />
@@ -18,6 +19,7 @@
 					<contextaction name="createBookmarksite" />
 					<contextaction name="createBlogsite" />
 					<contextaction name="createInternallink" />
+					<contextaction name="createGroup" />
 				</groupactions>
 			</contextactions>
 		</model>
@@ -45,6 +47,12 @@
 				<contextaction name="reactivate" />
 			</contextactions>
 		</model>
+		<model name="modules_sharethis/group">
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+			</contextactions>
+		</model>
 	</models>
 	<toolbar>
 		<toolbarbutton name="edit" />
@@ -58,9 +66,10 @@
 		<action name="edit" single="true" permission="Load" icon="edit" label="&amp;modules.uixul.bo.actions.Edit;" />
 		<action name="deactivated" permission="Deactivated" icon="deactivated" label="&amp;modules.uixul.bo.actions.Deactivate;" />
 		<action name="reactivate" permission="ReActivate" icon="reactivate" label="&amp;modules.uixul.bo.actions.ReActivate;" />
-		<action name="create_" actions="createBookmarksite,createBlogsite,createInternallink" icon="add" />
-		<action name="createBookmarksite" group="create_" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Bookmarksite;" />
-		<action name="createBlogsite" group="create_" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Blogsite;" />
-		<action name="createInternallink" group="create_" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Internallink;" />
+		<action name="create_" icon="add" />
+		<action name="createBookmarksite" single="true" permission="Insert_bookmarksite" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Bookmarksite;" />
+		<action name="createBlogsite" single="true" permission="Insert_blogsite" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Blogsite;" />
+		<action name="createInternallink" single="true" permission="Insert_internallink" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Internallink;" />
+		<action name="createGroup" single="true" permission="Insert_group" icon="add" label="&amp;modules.sharethis.bo.actions.Create-group;" />
 	</actions>
 </perspective>

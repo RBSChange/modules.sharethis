@@ -13,3 +13,6 @@ treechildren::-moz-tree-image(modules_sharethis_link){
 treechildren::-moz-tree-image(modules_sharethis_site){
 	list-style-image: url(/changeicons/small/link.png);
 }
+treechildren::-moz-tree-image(modules_sharethis_group){
+	list-style-image: url(/changeicons/small/share-group.png);
+}

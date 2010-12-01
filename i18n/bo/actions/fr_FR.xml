@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.sharethis.bo.actions" lcid="fr_FR">
-  <key id="create_">créer</key>
-  <key id="create-bookmarksite">ajouter un site de type « bookmark »</key>
-  <key id="create-blogsite">ajouter un site de type « blog »</key>
-  <key id="create-internallink">ajouter un lien interne</key>
-  <key id="create-group">créer</key>
+	<key id="create_">créer</key>
+	<key id="create-bookmarksite">ajouter un site de type « bookmark »</key>
+	<key id="create-blogsite">ajouter un site de type « blog »</key>
+	<key id="create-internallink">ajouter un lien interne</key>
+	<key id="create-group">ajouter un groupe de liens</key>
 </i18n>

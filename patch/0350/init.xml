@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<script>
+	<binding fileName="modules/sharethis/persistentdocument/import/sharethis_binding.xml" />
+	
+	<rootfolder module="sharethis">
+		<bookmarksite byLabel="Digg" id="digg" />
+		<bookmarksite byLabel="Facebook" id="facebook" />
+		<bookmarksite byLabel="Delicious" id="delicious" />
+		<bookmarksite byLabel="Google" id="google" />		
+		<blogsite byLabel="Twitter" id="twitter" />		
+		<internallink byLabel="Ajouter aux favoris" id="favorite" />
+		<internallink byLabel="Imprimer" id="print" />
+		<internallink byLabel="Envoyer par e-mail" id="email" />
+		
+		<group byCode="default" label="Groupe de liens par défaut" links-refids="digg,facebook,delicious,google,twitter,email" />
+		<group byCode="currentpage" label="Bloc de partage de la page courante" links-refids="digg,facebook,delicious,google,twitter,favorite,print,email" />
+	</rootfolder>
+</script>

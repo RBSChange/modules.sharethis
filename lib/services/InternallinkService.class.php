@@ -52,19 +52,26 @@ class sharethis_InternallinkService extends sharethis_LinkService
 		return $this->pp->createQuery('modules_sharethis/internallink', false);
 	}
 
-	function getShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator = '&amp;')
+	/**
+	 * @param sharethis_persistentdocument_internallink $document
+	 * @param String $url
+	 * @param String $title
+	 * @param String $varSeparator
+	 * @return String
+	 */
+	public function getShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
-		return $this->generateShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator);
+		return $this->generateShareUrl($document, $url, $title, $varSeparator);
 	}
 	
 	/**
 	 * @param sharethis_persistentdocument_internallink $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @param String $varSeparator
 	 * @return String
 	 */
-	protected function generateShareCurrentUrl($document, $currentUrl, $currentTitle, $varSeparator = '&amp;')
+	protected function generateShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
 		try
 		{
@@ -82,7 +89,7 @@ class sharethis_InternallinkService extends sharethis_LinkService
 			
 			if ($page !== null)
 			{
-				$replacements = array('PAGE_TITLE' => $currentTitle, 'PAGE_URL' => $currentUrl);
+				$replacements = array('PAGE_TITLE' => $title, 'PAGE_URL' => $url);
 			
 				$parameters = array();
 				if ($document->getMessageName() && $document->getMessagePattern())
@@ -104,13 +111,13 @@ class sharethis_InternallinkService extends sharethis_LinkService
 	
 	/**
 	 * @param sharethis_persistentdocument_internallink $document
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @return String
 	 */
-	public function getShareCurrentOnclick($document, $currentUrl, $currentTitle)
+	public function getShareOnclick($document, $url, $title)
 	{
-		$replacements = array('PAGE_TITLE' => $currentTitle, 'PAGE_URL' => $currentUrl);
+		$replacements = array('PAGE_TITLE' => $title, 'PAGE_URL' => $url);
 		return $this->applyReplacements($document->getOnclickPattern(), $replacements);
 	}
 }

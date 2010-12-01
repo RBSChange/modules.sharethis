@@ -6,63 +6,59 @@
 class sharethis_persistentdocument_link extends sharethis_persistentdocument_linkbase
 {
 	/**
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @return String
 	 */
-	public function getShareCurrentUrlIndirection($currentUrl, $currentTitle)
+	public function getShareUrlIndirection($url, $title)
 	{
-		return $this->getDocumentService()->getShareCurrentUrlIndirection($this, $currentUrl, $currentTitle);
+		return $this->getDocumentService()->getShareUrlIndirection($this, $url, $title);
 	}
 	
 	/**
-	 * @param String $currentUrl
-	 * @param String $currentTitle
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
+	 * @param String $title
 	 * @return String
 	 */
-	public function getShareCurrentUrl($currentUrl, $currentTitle, $varSeparator = '&amp;')
+	public function getShareUrl($url, $title, $varSeparator = '&amp;')
 	{
-		return $this->getDocumentService()->getShareCurrentUrl($this, $currentUrl, $currentTitle, $varSeparator);
+		return $this->getDocumentService()->getShareUrl($this, $url, $title, $varSeparator);
 	}
 	
 	/**
-	 * @param String $currentUrl
-	 * @param String $currentTitle
+	 * @param String $url
+	 * @param String $title
 	 * @return String
 	 */
-	public function getShareCurrentOnclick($currentUrl, $currentTitle)
+	public function getShareOnclick($url, $title)
 	{
-		return $this->getDocumentService()->getShareCurrentOnclick($this, $currentUrl, $currentTitle);
+		return $this->getDocumentService()->getShareOnclick($this, $url, $title);
+	}
+	
+	// Deprecated
+	
+	/**
+	 * @deprecated (will be removed in 4.0) use getShareUrlIndirection
+	 */
+	public function getShareCurrentUrlIndirection($url, $title)
+	{
+		return $this->getShareUrlIndirection($url, $title);
 	}
 	
 	/**
-	 * @param f_persistentdocument_PersistentDocument $document
-	 * @return String
+	 * @deprecated (will be removed in 4.0) use getShareUrl
 	 */
-/*	public function getShareDocumentUrl($document)
+	public function getShareCurrentUrl($url, $title, $varSeparator = '&amp;')
 	{
-		$title = null;
-		if (f_util_ClassUtils::methodExists($document, 'getShareTitle'))
-		{
-			$title = $document->getShareTitle();
-		}
-		$url = null;
-		if (f_util_ClassUtils::methodExists($document, 'getShareUrl'))
-		{
-			$url = $document->getShareUrl();
-		}
-		return $this->getDocumentService()->getShareCurrentUrl($this, $url, $title);
-	}*/
+		return $this->getShareUrl($url, $title, $varSeparator);
+	}
 	
 	/**
-	 * @param f_persistentdocument_PersistentDocument $document
-	 * @return String
+	 * @deprecated (will be removed in 4.0) use getShareOnclick
 	 */
-/*	public function getShareDocumentOnclick($document)
+	public function getShareCurrentOnclick($url, $title)
 	{
-		$title = $document->getShareTitle();
-		$url = $document->getShareUrl();
-		return $this->getDocumentService()->getShareCurrentOnclick($this, $url, $title);
-	}*/
+		return $this->getShareOnclick($url, $title);
+	}
 }

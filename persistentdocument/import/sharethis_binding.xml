@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-	<binding fileName="modules/generic/persistentdocument/import/generic_binding.xml"/>
-<binding name="site" className="sharethis_SiteScriptDocumentElement"/><binding name="bookmarksite" className="sharethis_BookmarksiteScriptDocumentElement"/><binding name="blogsite" className="sharethis_BlogsiteScriptDocumentElement"/><binding name="link" className="sharethis_LinkScriptDocumentElement"/><binding name="internallink" className="sharethis_InternallinkScriptDocumentElement"/></script>
+  <binding fileName="modules/generic/persistentdocument/import/generic_binding.xml"/>
+  <binding name="site" className="sharethis_SiteScriptDocumentElement"/>
+  <binding name="bookmarksite" className="sharethis_BookmarksiteScriptDocumentElement"/>
+  <binding name="blogsite" className="sharethis_BlogsiteScriptDocumentElement"/>
+  <binding name="link" className="sharethis_LinkScriptDocumentElement"/>
+  <binding name="internallink" className="sharethis_InternallinkScriptDocumentElement"/>
+  <binding name="group" className="sharethis_GroupScriptDocumentElement"/>
+</script>

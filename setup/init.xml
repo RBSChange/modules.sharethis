@@ -17,16 +17,19 @@
 	</systemfolder>
 	
 	<rootfolder module="sharethis">
-		<bookmarksite byLabel="Digg" submitUrl="http://digg.com/submit?" urlName="url" titleName="title" descriptionName="bodytext" icon-refid="icon1" />
-		<bookmarksite byLabel="Facebook" submitUrl="http://www.facebook.com/share.php?" urlName="u" titleName="t" icon-refid="icon2" />
-		<bookmarksite byLabel="Delicious" submitUrl="http://del.icio.us/posts?" urlName="url" titleName="title" descriptionName="notes" icon-refid="icon3" />
-		<bookmarksite byLabel="Google" submitUrl="http://www.google.com/bookmarks/mark?op=edit&amp;" urlName="bkmk" titleName="title" descriptionName="annotation" icon-refid="icon4" />
+		<bookmarksite byLabel="Digg" submitUrl="http://digg.com/submit?" urlName="url" titleName="title" descriptionName="bodytext" icon-refid="icon1" id="digg" />
+		<bookmarksite byLabel="Facebook" submitUrl="http://www.facebook.com/share.php?" urlName="u" titleName="t" icon-refid="icon2" id="facebook" />
+		<bookmarksite byLabel="Delicious" submitUrl="http://del.icio.us/posts?" urlName="url" titleName="title" descriptionName="notes" icon-refid="icon3" id="delicious" />
+		<bookmarksite byLabel="Google" submitUrl="http://www.google.com/bookmarks/mark?op=edit&amp;" urlName="bkmk" titleName="title" descriptionName="annotation" icon-refid="icon4" id="google" />
 		
-		<blogsite byLabel="Twitter" submitUrl="http://twitter.com/home/?" messageName="status" messagePattern="{PAGE_TITLE} : {PAGE_URL}" shortenUrls="true" icon-refid="icon5" />
+		<blogsite byLabel="Twitter" submitUrl="http://twitter.com/home/?" messageName="status" messagePattern="{PAGE_TITLE} : {PAGE_URL}" shortenUrls="true" icon-refid="icon5" id="twitter" />
 		
-		<internallink byLabel="Ajouter aux favoris" pageTag="contextual_website_website_favorite" onclickPattern="accessibleAddToFavorite(this); return false;" icon-refid="icon6" />
-		<internallink byLabel="Imprimer" pageTag="contextual_website_website_print" onclickPattern="accessiblePrint(this); return false;" icon-refid="icon7" />
-		<internallink byLabel="Envoyer par e-mail" pageTag="contextual_website_website_modules_sharethis_send-email" messageName="formParam[message]" messagePattern="{PAGE_TITLE} : {PAGE_URL}" icon-refid="icon8" />
+		<internallink byLabel="Ajouter aux favoris" pageTag="contextual_website_website_favorite" onclickPattern="accessibleAddToFavorite(this); return false;" icon-refid="icon6" id="favorite" />
+		<internallink byLabel="Imprimer" pageTag="contextual_website_website_print" onclickPattern="accessiblePrint(this); return false;" icon-refid="icon7" id="print" />
+		<internallink byLabel="Envoyer par e-mail" pageTag="contextual_website_website_modules_sharethis_send-email" messageName="formParam[message]" messagePattern="{PAGE_TITLE} : {PAGE_URL}" icon-refid="icon8" id="email" />
+		
+		<group byCode="default" label="Groupe de liens par défaut" links-refids="digg,facebook,delicious,google,twitter,email" />
+		<group byCode="currentpage" label="Bloc de partage de la page courante" links-refids="digg,facebook,delicious,google,twitter,favorite,print,email" />
 	</rootfolder>
 		
 	<systemfolder module="notification" relatedmodule="sharethis">
