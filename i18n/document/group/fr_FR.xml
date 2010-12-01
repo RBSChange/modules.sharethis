@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.sharethis.document.group" lcid="fr_FR">
+	<include id="m.generic.document.document" />
+	<key id="document-name">groupe de liens</key>
+	<key id="links">liens</key>
+	<key id="links-help">Liste des liens inclus dans le groupe.</key>
+	<key id="code">code</key>
+	<key id="code-help">Code utilisé pour retrouver le groupe.</key>
+</i18n>

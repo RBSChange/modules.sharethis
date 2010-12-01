@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.sharethis.document.permission" lcid="de_DE">
+  <key id="permission-panel-1">teil 1</key>
+  <key id="permission-panel-2">teil 2</key>
+  <key id="admin">administrator</key>
+  <key id="admin-help">administrator</key>
+  <key id="writer">redaktor</key>
+  <key id="writer-help">redaktor</key>
+  <key id="translator">Übersetzer</key>
+  <key id="translator-help">Übersetzer</key>
+  <key id="validator">Bestätiger</key>
+  <key id="validator-help">Bestätiger</key>
+  <key id="guest">Gast</key>
+  <key id="guest-help">Berechtigt, im Modul zu surfen</key>
+  <key id="user">Integrator</key>
+  <key id="user-help">Berechtigt, das Modul in den Ressourcen anzusehen</key>
+</i18n>

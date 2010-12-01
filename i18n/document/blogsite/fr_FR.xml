@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.sharethis.document.blogsite" lcid="fr_FR">
+  <key id="document-name">site de type « blog »</key>
+  <key id="label">libellé</key>
+  <key id="label-help">libellé du lien interne, utilisé dans l'interface d'administration uniquement.</key>
+  <key id="icon">icône</key>
+  <key id="icon-help">icône utilisé par les blocs d'affichage pour représenter le lien.</key>
+  <key id="submiturl">URL de soumission</key>
+  <key id="submiturl-help">URL sur laquelle soumettre le message. Celle-ci sera complétée automatiquement pour transmettre les données à la page.</key>
+  <key id="messagename">variable message</key>
+  <key id="messagename-help">nom de la variable de l'URL contenant le message.</key>
+  <key id="messagepattern">modèle du message</key>
+  <key id="messagepattern-help">modèle sur lequel le message sera construit. Deux variables sont disponibles : {PAGE_TITLE} et {PAGE_URL}</key>
+  <key id="shortenurls">raccourcir l'URL</key>
+  <key id="shortenurls-help">choisissez « oui » pour générer des URLs raccourcies vers les pages. Ceci est utile pour les plateformes où la taille du message est limitée (ex : Twitter), dans les autres cas, choisir « non ».</key>
+</i18n>

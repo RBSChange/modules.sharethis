@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<i18n baseKey="m.sharethis.document.bookmarksite" lcid="en_GB">
+  <key id="document-name">« bookmark » site</key>
+  <key id="label">label</key>
+  <key id="label-help">label of the internal link for the administration interface.</key>
+  <key id="icon">icon</key>
+  <key id="icon-help">icon used to represent the internal link in display blocks.</key>
+  <key id="submiturl">submission URL</key>
+  <key id="submiturl-help">URL used to submit messages. It will be automatically completed by all the parameters needed to complete the submission.</key>
+  <key id="urlname">URL variable</key>
+  <key id="urlname-help">name of the request parameter containing the URL of the link to share.</key>
+  <key id="titlename">title variable</key>
+  <key id="titlename-help">name of the request parameter containing the title of the link to share.</key>
+  <key id="titlepattern">title model</key>
+  <key id="titlepattern-help">model used to generate the link's title. Two variables are available : {PAGE_TITLE} and {PAGE_URL}.</key>
+  <key id="descriptionname">description variable</key>
+  <key id="descriptionname-help">name of the request parameter containing the description of the link to share.</key>
+  <key id="descriptionpattern">description model</key>
+  <key id="descriptionpattern-help">model used to generate the link's description. Two variables are available : {PAGE_TITLE} and {PAGE_URL}.</key>
+  <key id="shortenurls">shorten URL</key>
+  <key id="shortenurls-help">choose « yes » to generate short URL for the pages. It is useful for online services limiting the size of posted messages (such as Twitter).</key>
+</i18n>
