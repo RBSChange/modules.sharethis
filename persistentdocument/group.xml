@@ -4,7 +4,7 @@
 	model-version="1.0" icon="share-group" has-url="false" publish-on-day-change="false">
 	<properties>
 		<add name="links" type="modules_sharethis/link" max-occurs="-1" inverse="true" />
-		<add name="code" type="String" min-occurs="1" inverse="true">
+		<add name="code" type="String" min-occurs="1">
 			<constraints>unique:true</constraints>
 		</add>
 	</properties>

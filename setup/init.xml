@@ -2,7 +2,6 @@
 <script>
 	<binding fileName="modules/sharethis/persistentdocument/import/sharethis_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
-	<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
 	
 	<systemfolder module="media" relatedmodule="sharethis">
@@ -43,6 +42,7 @@
 	</systemfolder>
 	
 	<systemfolder module="form" relatedmodule="sharethis">
+		<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
 		<form formid="modules_sharethis/sendmail" label="Partager un lien" 
 			description="Pour partager ce lien, veuillez remplir le formulaire ci-dessous. Tous les champs sont obligatoires."
 			submitButton="Envoyer" confirmMessage="Votre message a bien été envoyé. Nous vous remercions de l'intérêt que vous portez à ce site."
