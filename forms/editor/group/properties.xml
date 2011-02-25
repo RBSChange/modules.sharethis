@@ -3,6 +3,6 @@
 	<section labeli18n="modules.uixul.bo.doceditor.fieldsgroup.Title">
 		<field name="label" />
 		<field name="code" />
-		<field name="links" />
+		<field name="links" allow="[modules_sharethis/link]" />
 	</section>
 </panel>
