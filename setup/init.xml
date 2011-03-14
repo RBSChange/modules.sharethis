@@ -37,7 +37,7 @@
 			codename="modules_sharethis/sendmail"
 			template="default"
 			subject="{name} souhaite partager un lien avec vous"
-			body="&lt;p&gt;Bonjour {friendname},&lt;/p&gt;&lt;p&gt;{name} ( {email} ) souhaite patager un lien avec vous et vous adresse ce message :&lt;/p&gt;&lt;p&gt;{message}&lt;/p&gt;" 
+			body="&lt;p&gt;Bonjour {friendname},&lt;/p&gt;&lt;p&gt;{name} ( {email} ) souhaite partager un lien avec vous et vous adresse ce message :&lt;/p&gt;&lt;p&gt;{message}&lt;/p&gt;" 
 			id="notif1"	/>
 	</systemfolder>
 	
