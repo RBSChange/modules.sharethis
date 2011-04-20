@@ -83,6 +83,10 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	 */
 	public function getShareOnclick($document, $url, $title)
 	{
+		if ($document->getPopup())
+		{
+			return 'accessiblePopup(this); return false;';
+		}		
 		return null;
 	}
 	
