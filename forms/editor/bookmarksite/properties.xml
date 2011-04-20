@@ -10,5 +10,6 @@
 		<field name="titlePattern" />
 		<field name="descriptionName" />
 		<field name="descriptionPattern" />
+		<field name="popup" />
 	</section>
 </panel>
