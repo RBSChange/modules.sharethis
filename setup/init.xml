@@ -22,7 +22,7 @@
 		<bookmarksite byLabel="Delicious" submitUrl="http://del.icio.us/posts?" urlName="url" titleName="title" descriptionName="notes" icon-refid="icon3" />
 		<bookmarksite byLabel="Google" submitUrl="http://www.google.com/bookmarks/mark?op=edit&amp;" urlName="bkmk" titleName="title" descriptionName="annotation" icon-refid="icon4" />
 		
-		<blogsite byLabel="Twitter" submitUrl="http://twitter.com/home/?" messageName="status" messagePattern="{PAGE_TITLE} : {PAGE_URL}" shortenUrls="true" icon-refid="icon5" />
+		<blogsite byLabel="Twitter" submitUrl="http://twitter.com/intent/tweet/?" messageName="status" messagePattern="{PAGE_TITLE} : {PAGE_URL}" shortenUrls="true" icon-refid="icon5" />
 		
 		<internallink byLabel="Ajouter aux favoris" pageTag="contextual_website_website_favorite" onclickPattern="accessibleAddToFavorite(this); return false;" icon-refid="icon6" />
 		<internallink byLabel="Imprimer" pageTag="contextual_website_website_print" onclickPattern="accessiblePrint(this); return false;" icon-refid="icon7" />
