@@ -19,7 +19,7 @@ class sharethis_BlockSharepageAction extends website_BlockAction
 	 */
 	public function getCacheKeyParameters($request)
 	{
-		return array($_SERVER['REQUEST_URI']);
+		return array("url" => $_SERVER['REQUEST_URI']);
 	}
 	
 	/**

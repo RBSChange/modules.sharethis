@@ -14,15 +14,6 @@ class sharethis_BlockShareurlAction extends website_BlockAction
 	}
 	
 	/**
-	 * @param f_mvc_Request $request
-	 * @return array
-	 */
-	public function getCacheKeyParameters($request)
-	{
-		return array($this->findLocalParameterValue('url'), $this->findLocalParameterValue('title'));
-	}
-	
-	/**
 	 * @see website_BlockAction::execute()
 	 *
 	 * @param f_mvc_Request $request
