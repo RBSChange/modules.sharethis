@@ -7,7 +7,7 @@
 /**
  * @package sharethis.list.phptal
  */
-class PHPTAL_Php_Attribute_CHANGE_sharelink extends ChangeTalAttribute 
+class PHPTAL_Php_Attribute_CHANGE_Sharelink extends ChangeTalAttribute 
 {	
 	/**
 	 * @see ChangeTalAttribute::getEvaluatedParameters()
