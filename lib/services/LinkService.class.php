@@ -135,30 +135,4 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 		$string = preg_replace('#\{(.*)\}#', '-', $string);
 		return $string;
 	}
-	
-	// Depreacted
-	
-	/**
-	 * @deprecated (will be removed in 4.0) use getShareUrlIndirection
-	 */
-	public function getShareCurrentUrlIndirection($document, $url, $title)
-	{
-		return $this->getShareUrlIndirection($document, $url, $title);
-	}
-
-	/**
-	 * @deprecated (will be removed in 4.0) use getShareUrl
-	 */
-	public function getShareCurrentUrl($document, $url, $title, $varSeparator = '&amp;')
-	{
-		return $this->getShareUrl($document, $url, $title, $varSeparator);
-	}
-
-	/**
-	 * @deprecated (will be removed in 4.0) use getShareOnclick
-	 */
-	public function getShareCurrentOnclick($document, $url, $title)
-	{
-		return $this->getShareOnclick($document, $url, $title);
-	}
 }

@@ -37,7 +37,7 @@ class sharethis_BlockSharepageAction extends website_BlockAction
 		
 		$domain = website_WebsiteModuleService::getInstance()->getCurrentWebsite()->getDomain();
 		$request->setAttribute('currentUrl', 'http://' . $domain . LinkHelper::getCurrentUrl());
-		$request->setAttribute('currentTitle', $this->getPage()->getTitle());
+		$request->setAttribute('currentTitle', $this->getContext()->getTitle());
 		return website_BlockView::SUCCESS;
 	}
 }
