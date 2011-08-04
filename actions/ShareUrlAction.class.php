@@ -3,11 +3,11 @@
  * sharethis_ShareUrlAction
  * @package modules.sharethis.actions
  */
-class sharethis_ShareUrlAction extends f_action_BaseAction
+class sharethis_ShareUrlAction extends change_Action
 {
 	/**
-	 * @param Context $context
-	 * @param Request $request
+	 * @param change_Context $context
+	 * @param change_Request $request
 	 */
 	public function _execute($context, $request)
 	{
@@ -15,11 +15,11 @@ class sharethis_ShareUrlAction extends f_action_BaseAction
 		$url = $link->getShareUrl($request->getParameter('url'), $request->getParameter('title'), '&');
 		if ($url !== null)
 		{
-			HttpController::getInstance()->redirectToUrl($url);
+			change_Controller::getInstance()->redirectToUrl($url);
 		}
 		else
 		{
-			HttpController::getInstance()->redirect('website', 'Error404');
+			change_Controller::getInstance()->redirect('website', 'Error404');
 		}
 	}
 	
