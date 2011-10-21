@@ -83,7 +83,7 @@ class sharethis_InternallinkService extends sharethis_LinkService
 			}
 			else if ($ts->isContextualTag($tag))
 			{
-				$website = website_WebsiteModuleService::getInstance()->getCurrentWebsite();
+				$website = website_WebsiteService::getInstance()->getCurrentWebsite();
 				$page = $ts->getDocumentByContextualTag($tag, $website);
 			}
 			
