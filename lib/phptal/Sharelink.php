@@ -1,5 +1,5 @@
 <?php
-// change:memberdate
+// change:sharelink
 //
 // Example:
 //   <a change:sharelink="link link; url url; title title" />
