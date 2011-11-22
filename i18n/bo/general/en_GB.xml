@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.sharethis.bo.general" lcid="en_GB">
-  <key id="module-name">share links</key>
-  <key id="tree-root-name">share links</key>
-  <key id="system-folder-name">share links</key>
+  <key id="module-name">link sharing</key>
+  <key id="tree-root-name">link sharing</key>
+  <key id="system-folder-name">link sharing</key>
 </i18n>

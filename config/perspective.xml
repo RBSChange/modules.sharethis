@@ -61,15 +61,15 @@
 		<toolbarbutton name="reactivate" />
 	</toolbar>
 	<actions>
-		<action name="refresh" single="true" icon="refresh" label="&amp;modules.uixul.bo.actions.Refresh;" />
-		<action name="delete" permission="Delete" icon="delete" label="&amp;modules.uixul.bo.actions.Delete;" />
-		<action name="edit" single="true" permission="Load" icon="edit" label="&amp;modules.uixul.bo.actions.Edit;" />
-		<action name="deactivated" permission="Deactivated" icon="deactivated" label="&amp;modules.uixul.bo.actions.Deactivate;" />
-		<action name="reactivate" permission="ReActivate" icon="reactivate" label="&amp;modules.uixul.bo.actions.ReActivate;" />
+		<action name="refresh" single="true" icon="refresh" labeli18n="m.uixul.bo.actions.Refresh" />
+		<action name="delete" permission="Delete" icon="delete" labeli18n="m.uixul.bo.actions.Delete" />
+		<action name="edit" single="true" permission="Load" icon="edit" labeli18n="m.uixul.bo.actions.Edit" />
+		<action name="deactivated" permission="Deactivated" icon="deactivated" labeli18n="m.uixul.bo.actions.Deactivate" />
+		<action name="reactivate" permission="ReActivate" icon="reactivate" labeli18n="m.uixul.bo.actions.ReActivate" />
 		<action name="create_" icon="add" />
-		<action name="createBookmarksite" single="true" permission="Insert_bookmarksite" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Bookmarksite;" />
-		<action name="createBlogsite" single="true" permission="Insert_blogsite" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Blogsite;" />
-		<action name="createInternallink" single="true" permission="Insert_internallink" icon="add" label="&amp;modules.sharethis.bo.actions.Create-Internallink;" />
-		<action name="createGroup" single="true" permission="Insert_group" icon="add" label="&amp;modules.sharethis.bo.actions.Create-group;" />
+		<action name="createBookmarksite" single="true" permission="Insert_bookmarksite" icon="add" labeli18n="m.sharethis.bo.actions.Create-Bookmarksite" />
+		<action name="createBlogsite" single="true" permission="Insert_blogsite" icon="add" labeli18n="m.sharethis.bo.actions.Create-Blogsite" />
+		<action name="createInternallink" single="true" permission="Insert_internallink" icon="add" labeli18n="m.sharethis.bo.actions.Create-Internallink" />
+		<action name="createGroup" single="true" permission="Insert_group" icon="add" labeli18n="m.sharethis.bo.actions.Create-group" />
 	</actions>
 </perspective>
