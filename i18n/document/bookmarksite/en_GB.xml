@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <i18n baseKey="m.sharethis.document.bookmarksite" lcid="en_GB">
-	<include id="m.sharethis.document.link" />
-	<key id="document-name">« bookmark » site</key>
-	<key id="submiturl">submission URL</key>
-	<key id="submiturl-help">URL used to submit messages. It will be automatically completed by all the parameters needed to complete the submission.</key>
-	<key id="urlname">URL variable</key>
-	<key id="urlname-help">name of the request parameter containing the URL of the link to share.</key>
-	<key id="titlename">title variable</key>
-	<key id="titlename-help">name of the request parameter containing the title of the link to share.</key>
-	<key id="titlepattern">title model</key>
-	<key id="titlepattern-help">model used to generate the link's title. Two variables are available : {PAGE_TITLE} and {PAGE_URL}.</key>
-	<key id="descriptionname">description variable</key>
-	<key id="descriptionname-help">name of the request parameter containing the description of the link to share.</key>
-	<key id="descriptionpattern">description model</key>
-	<key id="descriptionpattern-help">model used to generate the link's description. Two variables are available : {PAGE_TITLE} and {PAGE_URL}.</key>
+  <include id="m.sharethis.document.link"/>
+  <key id="document-name">"bookmark" website</key>
+  <key id="submiturl">submission URL</key>
+  <key id="submiturl-help">URL through which the message can be submitted. This URL will be automatically completed in order to transmit the data to the page.</key>
+  <key id="urlname">URL parameter</key>
+  <key id="urlname-help">name of the URL parameter containing the URL of the link to share.</key>
+  <key id="titlename">title parameter</key>
+  <key id="titlename-help">This is the name of the URL parameter containing the title of the link to share.</key>
+  <key id="titlepattern">title pattern</key>
+  <key id="titlepattern-help">This is the model on which the title will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
+  <key id="descriptionname">description parameter</key>
+  <key id="descriptionname-help">This is the name of the URL parameter containing the description of the link to share.</key>
+  <key id="descriptionpattern">description pattern</key>
+  <key id="descriptionpattern-help">This is the model on which the description will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
 </i18n>
