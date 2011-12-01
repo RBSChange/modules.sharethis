@@ -7,11 +7,13 @@
 				<child model="modules_sharethis/blogsite" />
 				<child model="modules_sharethis/bookmarksite" />
 				<child model="modules_sharethis/group" />
+				<child model="modules_generic/folder" />
 			</children>
 			<drops>
 				<drop model="modules_sharethis/blogsite" action="move" />
 				<drop model="modules_sharethis/internallink" action="move" />
 				<drop model="modules_sharethis/bookmarksite" action="move" />
+				<drop model="modules_generic/folder" action="move" />
 			</drops>
 			<contextactions>
 				<contextaction name="edit" />
@@ -20,6 +22,33 @@
 					<contextaction name="createBlogsite" />
 					<contextaction name="createInternallink" />
 					<contextaction name="createGroup" />
+					<contextaction name="createFolder" />
+				</groupactions>
+			</contextactions>
+		</model>
+		<model name="modules_generic/folder">
+			<children>
+				<child model="modules_sharethis/internallink" />
+				<child model="modules_sharethis/blogsite" />
+				<child model="modules_sharethis/bookmarksite" />
+				<child model="modules_sharethis/group" />
+				<child model="modules_generic/folder" />
+			</children>
+			<drops>
+				<drop model="modules_sharethis/blogsite" action="move" />
+				<drop model="modules_sharethis/internallink" action="move" />
+				<drop model="modules_sharethis/bookmarksite" action="move" />
+				<drop model="modules_generic/folder" action="move" />
+			</drops>
+			<contextactions>
+				<contextaction name="edit" />
+				<contextaction name="delete" />
+				<groupactions name="createFolder_">
+					<contextaction name="createBookmarksite" />
+					<contextaction name="createBlogsite" />
+					<contextaction name="createInternallink" />
+					<contextaction name="createGroup" />
+					<contextaction name="createFolder" />
 				</groupactions>
 			</contextactions>
 		</model>
@@ -71,5 +100,7 @@
 		<action name="createBlogsite" single="true" permission="Insert_blogsite" icon="add" labeli18n="m.sharethis.bo.actions.create-blogsite" />
 		<action name="createInternallink" single="true" permission="Insert_internallink" icon="add" labeli18n="m.sharethis.bo.actions.create-internallink" />
 		<action name="createGroup" single="true" permission="Insert_group" icon="add" labeli18n="m.sharethis.bo.actions.create-group" />
+		<action name="createFolder_" icon="add" labeli18n="m.sharethis.bo.actions.create_" />
+		<action name="createFolder" single="true" permission="Insert_folder" icon="create-folder" labeli18n="m.uixul.bo.actions.create-folder" />
 	</actions>
 </perspective>
