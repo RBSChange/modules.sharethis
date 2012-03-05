@@ -3,4 +3,17 @@
   <key id="module-name">partage de liens</key>
   <key id="tree-root-name">partage de liens</key>
   <key id="system-folder-name">partage de liens</key>
+  <!-- Google +1 -->
+  <key id="googleplus-annotation-none">aucune</key>
+  <key id="googleplus-annotation-bubble">info-bulle</key>
+  <key id="googleplus-annotation-inline">intégrée</key>
+  <key id="googleplus-size-small">petit</key>
+  <key id="googleplus-size-medium">moyen</key>
+  <key id="googleplus-size-standard">standard</key>
+  <key id="googleplus-size-tall">grand</key>
+  <!-- Pin It -->
+  <key id="pinit-layout-horizontal">horizontal</key>
+  <key id="pinit-layout-vertical">vertical</key>
+  <key id="pinit-layout-none">aucun</key>
+  
 </i18n>

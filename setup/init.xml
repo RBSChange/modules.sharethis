@@ -4,6 +4,32 @@
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
 	
+	<systemfolder module="list" relatedmodule="sharethis">	
+		
+		<staticlist listid="modules_sharethis/pinitcountlayout" label="Pinterest button"
+			description="Pinterest button layout">			
+			<staticitem value="horizontal" label="&amp;modules.sharethis.bo.general.Pinit-layout-horizontal;" />
+			<staticitem value="vertical" label="&amp;modules.sharethis.bo.general.Pinit-layout-vertical;" />
+			<staticitem value="none" label="&amp;modules.sharethis.bo.general.Pinit-layout-none;" />
+		</staticlist>
+		
+		<staticlist listid="modules_sharethis/googleplusannotation" label="Google Plus Annotation"
+			description="Google Plus Annotation">			
+			<staticitem value="none" label="&amp;modules.sharethis.bo.general.Googleplus-annotation-none;" />
+			<staticitem value="bubble" label="&amp;modules.sharethis.bo.general.Googleplus-annotation-bubble;" />
+			<staticitem value="inline" label="&amp;modules.sharethis.bo.general.Googleplus-annotation-inline;" />
+		</staticlist>
+		
+		<staticlist listid="modules_sharethis/googleplussize" label="Google Plus Size"
+			description="Google Plus Size">			
+			<staticitem value="small" label="&amp;modules.sharethis.bo.general.Googleplus-size-small;" />
+			<staticitem value="medium" label="&amp;modules.sharethis.bo.general.Googleplus-size-medium;" />
+			<staticitem value="standard" label="&amp;modules.sharethis.bo.general.Googleplus-size-standard;" />
+			<staticitem value="tall" label="&amp;modules.sharethis.bo.general.Googleplus-size-tall;" />
+		</staticlist>
+				
+	</systemfolder>	
+	
 	<systemfolder module="media" relatedmodule="sharethis">
 		<media path="modules/sharethis/setup/icons/digg_16x16.png" byLabel="Digg" label="Digg" id="icon1" />
 		<media path="modules/sharethis/setup/icons/facebook_16x16.png" byLabel="Facebook" label="Facebook" id="icon2" />

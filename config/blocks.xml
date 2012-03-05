@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-	<block type="modules_sharethis_sharepage" icon="sharethis" label="&amp;modules.sharethis.bo.blocks.Sharepage;"
-		afterAll="true" cache="true" cache-deps="[modules_sharethis/link]">
-		<parameters>
-			<parameter name="groupCode" type="String" default-value="currentpage" />
-		</parameters>
-	</block>
-	<block type="modules_sharethis_Shareurl" icon="sharethis" label="&amp;modules.sharethis.bo.blocks.shareurl.Title;"
-		cache="true" cache-deps="[modules_sharethis/link]">
-		<parameters>
-			<parameter name="groupCode" type="String" default-value="default" />
-			<parameter name="url" type="String" min-occurs="1" />
-			<parameter name="title" type="String" min-occurs="1" />
-		</parameters>
-	</block>
+  <block type="modules_sharethis_sharepage" icon="sharethis" label="&amp;modules.sharethis.bo.blocks.Sharepage;" afterAll="true" cache="true" cache-deps="[modules_sharethis/link]">
+    <parameters>
+      <parameter name="groupCode" type="String" default-value="currentpage"/>
+    </parameters>
+  </block>
+  <block type="modules_sharethis_Shareurl" icon="sharethis" label="&amp;modules.sharethis.bo.blocks.shareurl.Title;" cache="true" cache-deps="[modules_sharethis/link]">
+    <parameters>
+      <parameter name="groupCode" type="String" default-value="default"/>
+      <parameter name="url" type="String" min-occurs="1"/>
+      <parameter name="title" type="String" min-occurs="1"/>
+    </parameters>
+  </block>
+  <block type="modules_sharethis_Pinit" icon="sharethis">
+    <parameters>
+      <parameter name="countlayout" type="String" list-id="modules_sharethis/pinitcountlayout" default-value="horizontal"/>
+    </parameters>
+  </block>
+  <block type="modules_sharethis_Googleplus" icon="sharethis">
+  	<parameters>
+  		<parameter name="annotation" type="String" list-id="modules_sharethis/googleplusannotation" default-value="bubble"/>
+  		<parameter name="size" type="String" list-id="modules_sharethis/googleplussize" default-value="standard"/>
+  	</parameters>
+  </block>
 </blocks>
