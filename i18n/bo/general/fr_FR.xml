@@ -15,5 +15,10 @@
   <key id="pinit-layout-horizontal">horizontal</key>
   <key id="pinit-layout-vertical">vertical</key>
   <key id="pinit-layout-none">aucun</key>
-  
+  <!-- Facebook like -->
+  <key id="facebooklike-verb-like">j'aime</key>
+  <key id="facebooklike-verb-recommender">recommender</key>
+  <key id="facebooklike-layout-standard">standard</key>
+  <key id="facebooklike-layout-standard">"button count"</key>
+  <key id="facebooklike-layout-standard">"box count"</key>  
 </i18n>

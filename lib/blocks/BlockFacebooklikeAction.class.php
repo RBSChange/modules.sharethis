@@ -40,7 +40,7 @@ class sharethis_BlockFacebooklikeAction extends website_BlockAction
 			, 'top');
 			$this->getContext()->setAttribute('fb_sdk_registered', true);
 		}
-		return website_BlockView::SUCCESS;
+		return $this->getTemplateByFullName('modules_sharethis', 'Sharethis-Block-Facebooklike-Success'); 
 	}
 	
 	/**

@@ -27,6 +27,34 @@
 			<staticitem value="standard" label="&amp;modules.sharethis.bo.general.Googleplus-size-standard;" />
 			<staticitem value="tall" label="&amp;modules.sharethis.bo.general.Googleplus-size-tall;" />
 		</staticlist>
+		
+		<staticlist listid="modules_sharethis/facebooklikeverb" label="Facebook like verb" description="Facebook like verb">			
+			<staticitem value="like" label="&amp;modules.sharethis.bo.general.Facebooklike-verb-like;" />
+			<staticitem value="recommend" label="&amp;modules.sharethis.bo.general.Facebooklike-verb-recommend;" />
+		</staticlist>
+		
+		<staticlist listid="modules_sharethis/facebooklikecolorscheme" label="Facebook like color scheme"
+			description="Facebook like color scheme">			
+			<staticitem value="light" label="light" />
+			<staticitem value="dark" label="dark" />
+		</staticlist>		
+		
+		<staticlist listid="modules_sharethis/facebooklikefont" label="Facebook like font"
+			description="Facebook like font">			
+			<staticitem value="arial" label="arial" />
+			<staticitem value="lucida grande" label="lucida grande" />
+			<staticitem value="segoe ui" label="segoe ui" />
+			<staticitem value="tahoma" label="tahoma" />
+			<staticitem value="trebuchet ms" label="trebuchet ms" />
+			<staticitem value="verdana" label="verdana" />
+		</staticlist>	
+		
+		<staticlist listid="modules_sharethis/facebooklikelayout" label="Facebook like layout"
+			description="Facebook like layout">			
+			<staticitem value="standard" label="&amp;modules.sharethis.bo.general.Facebooklike-layout-standard;" />
+			<staticitem value="button_count" label="&amp;modules.sharethis.bo.general.Facebooklike-layout-buttoncount;" />
+			<staticitem value="box_count" label="&amp;modules.sharethis.bo.general.Facebooklike-layout-boxcount;" />
+		</staticlist>		
 				
 	</systemfolder>	
 	

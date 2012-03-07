@@ -18,9 +18,22 @@
     </parameters>
   </block>
   <block type="modules_sharethis_Googleplus" icon="sharethis">
-  	<parameters>
-  		<parameter name="annotation" type="String" list-id="modules_sharethis/googleplusannotation" default-value="bubble"/>
-  		<parameter name="size" type="String" list-id="modules_sharethis/googleplussize" default-value="standard"/>
-  	</parameters>
+    <parameters>
+      <parameter name="annotation" type="String" list-id="modules_sharethis/googleplusannotation" default-value="bubble"/>
+      <parameter name="size" type="String" list-id="modules_sharethis/googleplussize" default-value="standard"/>
+    </parameters>
+  </block>
+  <block type="modules_sharethis_Facebooklike" icon="sharethis">
+  	 <parameters>
+  	 	<parameter name="appId" type="String" default-value=""/>
+  	 	<parameter name="ref" type="String" default-value=""/>
+  	 	<parameter name="send" type="Boolean" default-value="true"/>
+  	 	<parameter name="showfaces" type="Boolean" default-value="true"/>
+		<parameter name="blockwidth" type="Integer" default-value="450"/>
+		<parameter name="verb" type="String" list-id="modules_sharethis/facebooklikeverb" default-value="like"/>
+		<parameter name="colorscheme" type="String" list-id="modules_sharethis/facebooklikecolorscheme" default-value="light"/>
+		<parameter name="font" type="String" list-id="modules_sharethis/facebooklikefont" default-value="lucida grande"/>
+		<parameter name="layout" type="String" list-id="modules_sharethis/facebooklikelayout" default-value="standard"/>
+    </parameters>
   </block>
 </blocks>
