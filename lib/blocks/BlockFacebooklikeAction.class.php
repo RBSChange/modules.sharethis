@@ -18,6 +18,10 @@ class sharethis_BlockFacebooklikeAction extends website_BlockAction
 		}
 		if (!$this->getContext()->hasAttribute('fb_sdk_registered'))
 		{
+			$fbkey = f_util_StringUtils::randomString();
+			$storage = Controller::getInstance()->getContext()->getStorage();
+			$storage->write('fbkey', $fbkey);
+				
 			$lcid = LocaleService::getInstance()->getLCID($this->getLang());
 			$appId = $this->getConfiguration()->getAppId();
 			$this->getContext()->appendToPlainMarker("
@@ -39,6 +43,7 @@ class sharethis_BlockFacebooklikeAction extends website_BlockAction
 			}(document, 'script', 'facebook-jssdk'));</script>"
 			, 'top');
 			$this->getContext()->setAttribute('fb_sdk_registered', true);
+			
 		}
 		return $this->getTemplateByFullName('modules_sharethis', 'Sharethis-Block-Facebooklike-Success'); 
 	}
@@ -50,6 +55,9 @@ class sharethis_BlockFacebooklikeAction extends website_BlockAction
 	 */
 	protected function getEdgeCreateCallback()
 	{
-		return 'function(response){}';
+		$data = $this->getHTTPRequest()->getParameters();
+		$data['fbkey'] = Controller::getInstance()->getContext()->getStorage()->read('fbkey');
+		$dataString = JsonService::getInstance()->encode($data);
+		return 'function(response){jQuery.get("' . LinkHelper::getActionUrl('sharethis', 'Facebookcallback') . '", {data : '.  $dataString .', t : (new Date()).getTime(), url : response });}';
 	}
 }

@@ -17,8 +17,8 @@
   <key id="pinit-layout-none">aucun</key>
   <!-- Facebook like -->
   <key id="facebooklike-verb-like">j'aime</key>
-  <key id="facebooklike-verb-recommender">recommender</key>
+  <key id="facebooklike-verb-recommend">recommender</key>
   <key id="facebooklike-layout-standard">standard</key>
-  <key id="facebooklike-layout-standard">"button count"</key>
-  <key id="facebooklike-layout-standard">"box count"</key>  
+  <key id="facebooklike-layout-buttoncount">"button count"</key>
+  <key id="facebooklike-layout-boxcount">"box count"</key>  
 </i18n>
