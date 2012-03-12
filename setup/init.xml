@@ -3,6 +3,7 @@
 	<binding fileName="modules/sharethis/persistentdocument/import/sharethis_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
 	
 	<systemfolder module="list" relatedmodule="sharethis">	
 		
