@@ -47,10 +47,6 @@
 			description="Pour partager ce lien, veuillez remplir le formulaire ci-dessous. Tous les champs sont obligatoires."
 			submitButton="Envoyer" confirmMessage="Votre message a bien été envoyé. Nous vous remercions de l'intérêt que vous portez à ce site."
 			markup="default" useBackLink="true" useCaptcha="true" notification-refid="notif1" messageSendingType="1">
-
-			<fieldhidden fieldName="linkTitle" label="Titre du lien" required="true" />
-			<fieldhidden fieldName="linkUrl" label="URL du lien" required="true" />
-			
 			<group label="Vous">
 				<fieldtext fieldName="name" label="Nom" 
 					required="true" multiline="false" cols="50" maxlength="255"
