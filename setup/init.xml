@@ -101,7 +101,7 @@
 		<form formid="modules_sharethis/sendmail" label="Partager un lien" 
 			description="Pour partager ce lien, veuillez remplir le formulaire ci-dessous. Tous les champs sont obligatoires."
 			submitButton="Envoyer" confirmMessage="Votre message a bien été envoyé. Nous vous remercions de l'intérêt que vous portez à ce site."
-			markup="default" useBackLink="true" useCaptcha="true" notification-refid="notif1" messageSendingType="1">
+			markup="default" useBackLink="true" useCaptcha="true" notification-refid="notif1">
 			<group label="Vous">
 				<fieldtext fieldName="name" label="Nom" 
 					required="true" multiline="false" cols="50" maxlength="255"
