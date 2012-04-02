@@ -106,10 +106,7 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	 */
 	public function getPublishedBoSortedByGroup($group)
 	{		
-		$query = $this->createQuery()->add(Restrictions::published());
-		$query->add(Restrictions::descendentOf(ModuleService::getInstance()->getRootFolderId('sharethis')));
-		$query->add(Restrictions::eq('group', $group));
-		return $query->find();
+		return $group->getPublishedLinksArray();
 	}
 	
 	/**
