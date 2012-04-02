@@ -54,9 +54,9 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $url
-	 * @param String $title
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @return string
 	 */
 	public function getShareUrlIndirection($document, $url, $title)
 	{
@@ -65,10 +65,10 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $url
-	 * @param String $title
-	 * @param String $varSeparator
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $varSeparator
+	 * @return string
 	 */
 	public function getShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
@@ -91,27 +91,17 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
-	 * @return sharethis_persistentdocument_site[]
-	 */
-	public function getAllPublishedBoSorted()
-	{
-		$query = $this->createQuery()->add(Restrictions::published());
-		$query->add(Restrictions::descendentOf(ModuleService::getInstance()->getRootFolderId('sharethis')));
-		return $query->find();
-	}
-	
-	/**
 	 * @param sharethis_persistentdocument_group $group
 	 * @return sharethis_persistentdocument_site[]
 	 */
-	public function getPublishedBoSortedByGroup($group)
-	{		
+	public function getPublishedByGroup($group)
+	{
 		return $group->getPublishedLinksArray();
 	}
 	
 	/**
-	 * @param String $string
-	 * @param Array $replacements
+	 * @param string $string
+	 * @param array $replacements
 	 */
 	protected function applyReplacements($string, $replacements)
 	{
@@ -157,5 +147,23 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	public function getShareCurrentOnclick($document, $url, $title)
 	{
 		return $this->getShareOnclick($document, $url, $title);
+	}
+	
+	/**
+	 * @deprecated (will be removed in 4.0) use getPublishedByGroup
+	 */
+	public function getAllPublishedBoSorted()
+	{
+		$query = $this->createQuery()->add(Restrictions::published());
+		$query->add(Restrictions::descendentOf(ModuleService::getInstance()->getRootFolderId('sharethis')));
+		return $query->find();
+	}
+	
+	/**
+	 * @deprecated (will be removed in 4.0) use getPublishedByGroup
+	 */
+	public function getPublishedBoSortedByGroup($group)
+	{
+		return $group->getPublishedLinksArray();
 	}
 }

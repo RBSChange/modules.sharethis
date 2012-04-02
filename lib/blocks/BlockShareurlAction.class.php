@@ -16,12 +16,12 @@ class sharethis_BlockShareurlAction extends website_BlockAction
 	/**
 	 * @param f_mvc_Request $request
 	 * @param f_mvc_Response $response
-	 * @return String
+	 * @return string
 	 */
 	public function execute($request, $response)
 	{
 		$group = sharethis_GroupService::getInstance()->getByCode($this->getConfiguration()->getGroupCode());
-		$links = sharethis_LinkService::getInstance()->getPublishedBoSortedByGroup($group);
+		$links = sharethis_LinkService::getInstance()->getPublishedByGroup($group);
 		$request->setAttribute('links', $links);
 		
 		$request->setAttribute('url', $this->findLocalParameterValue('url'));
