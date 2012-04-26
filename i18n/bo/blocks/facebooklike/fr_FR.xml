@@ -2,11 +2,21 @@
 <i18n baseKey="m.sharethis.bo.blocks.facebooklike" lcid="fr_FR">
   <key id="title">Facebook like</key>
   <key id="appId">Facebook appId</key>
+  <key id="appId-help">Facebook appId</key>
   <key id="ref">réference</key>
+  <key id="ref-help">réference</key>
   <key id="send">bouton "Envoyer"</key>
+  <key id="send-help">bouton "Envoyer"</key>
   <key id="showfaces">afficher les visages</key>
+  <key id="showfaces-help">afficher les visages</key>
   <key id="blockwidth">largeur</key>
+  <key id="blockwidth-help">largeur</key>
   <key id="verb">verbe de l'action</key>
+  <key id="verb-help">verbe de l'action</key>
   <key id="colorscheme">couleurs</key>
+  <key id="colorscheme-help">couleurs</key>
   <key id="font">police</key>
+  <key id="font-help">police de caractère</key>
+  <key id="layout">cadre</key>
+  <key id="layout-help">type de cadre</key>
 </i18n>
