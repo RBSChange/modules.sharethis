@@ -5,15 +5,15 @@
  */
 class sharethis_BookmarksiteScriptDocumentElement extends import_ScriptDocumentElement
 {
-    /**
-     * @return sharethis_persistentdocument_bookmarksite
-     */
-    protected function initPersistentDocument()
-    {
-    	return sharethis_BookmarksiteService::getInstance()->getNewDocumentInstance();
-    }
-    
-    /**
+	/**
+	 * @return sharethis_persistentdocument_bookmarksite
+	 */
+	protected function initPersistentDocument()
+	{
+		return sharethis_BookmarksiteService::getInstance()->getNewDocumentInstance();
+	}
+	
+	/**
 	 * @return f_persistentdocument_PersistentDocumentModel
 	 */
 	protected function getDocumentModel()

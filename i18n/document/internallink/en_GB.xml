@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.sharethis.document.internallink" lcid="en_GB">
-  <include id="m.sharethis.document.link"/>
-  <key id="document-name">internal link</key>
-  <key id="pagetag">tag</key>
-  <key id="pagetag-help">tag of the linked page.</key>
-  <key id="onclickpattern">onclick pattern</key>
-  <key id="onclickpattern-help">This is the model on which the link's onclick attribute will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
-  <key id="messagename">message parameter</key>
-  <key id="messagename-help">Name of the URL parameter containing the message.</key>
-  <key id="messagepattern">message pattern</key>
-  <key id="messagepattern-help">Model on which the message will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
+	<include id="m.sharethis.document.link" />
+	<key id="document-name">internal link</key>
+	<key id="pagetag">tag</key>
+	<key id="pagetag-help">tag of the linked page.</key>
+	<key id="onclickpattern">onclick pattern</key>
+	<key id="onclickpattern-help">This is the model on which the link's onclick attribute will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
+	<key id="messagename">message parameter</key>
+	<key id="messagename-help">Name of the URL parameter containing the message.</key>
+	<key id="messagepattern">message pattern</key>
+	<key id="messagepattern-help">Model on which the message will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
 </i18n>

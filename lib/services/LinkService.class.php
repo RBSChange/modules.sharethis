@@ -1,27 +1,10 @@
 <?php
 /**
- * sharethis_LinkService
- * @package sharethis
+ * @package modules.sharethis
+ * @method sharethis_LinkService getInstance()
  */
 class sharethis_LinkService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var sharethis_LinkService
-	 */
-	private static $instance;
-
-	/**
-	 * @return sharethis_LinkService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return sharethis_persistentdocument_link
 	 */
@@ -38,7 +21,7 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/link');
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/link');
 	}
 	
 	/**
@@ -49,14 +32,14 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/link', false);
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/link', false);
 	}
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $url
-	 * @param String $title
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @return string
 	 */
 	public function getShareUrlIndirection($document, $url, $title)
 	{
@@ -65,10 +48,10 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $url
-	 * @param String $title
-	 * @param String $varSeparator
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $varSeparator
+	 * @return string
 	 */
 	public function getShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
@@ -77,9 +60,9 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 
 	/**
 	 * @param sharethis_persistentdocument_link $document
-	 * @param String $url
-	 * @param String $title
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @return string
 	 */
 	public function getShareOnclick($document, $url, $title)
 	{
@@ -91,30 +74,17 @@ class sharethis_LinkService extends f_persistentdocument_DocumentService
 	}
 	
 	/**
-	 * @return sharethis_persistentdocument_site[]
-	 */
-	public function getAllPublishedBoSorted()
-	{
-		$query = $this->createQuery()->add(Restrictions::published());
-		$query->add(Restrictions::descendentOf(ModuleService::getInstance()->getRootFolderId('sharethis')));
-		return $query->find();
-	}
-	
-	/**
 	 * @param sharethis_persistentdocument_group $group
 	 * @return sharethis_persistentdocument_site[]
 	 */
-	public function getPublishedBoSortedByGroup($group)
-	{		
-		$query = $this->createQuery()->add(Restrictions::published());
-		$query->add(Restrictions::descendentOf(ModuleService::getInstance()->getRootFolderId('sharethis')));
-		$query->add(Restrictions::eq('group', $group));
-		return $query->find();
+	public function getPublishedByGroup($group)
+	{
+		return $group->getPublishedLinksArray();
 	}
 	
 	/**
-	 * @param String $string
-	 * @param Array $replacements
+	 * @param string $string
+	 * @param array $replacements
 	 */
 	protected function applyReplacements($string, $replacements)
 	{

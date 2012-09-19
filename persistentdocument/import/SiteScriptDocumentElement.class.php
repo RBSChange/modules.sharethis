@@ -5,15 +5,15 @@
  */
 class sharethis_SiteScriptDocumentElement extends import_ScriptDocumentElement
 {
-    /**
-     * @return sharethis_persistentdocument_site
-     */
-    protected function initPersistentDocument()
-    {
-    	return sharethis_SiteService::getInstance()->getNewDocumentInstance();
-    }
-    
-    /**
+	/**
+	 * @return sharethis_persistentdocument_site
+	 */
+	protected function initPersistentDocument()
+	{
+		return sharethis_SiteService::getInstance()->getNewDocumentInstance();
+	}
+	
+	/**
 	 * @return f_persistentdocument_PersistentDocumentModel
 	 */
 	protected function getDocumentModel()

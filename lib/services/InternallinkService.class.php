@@ -1,27 +1,10 @@
 <?php
 /**
- * sharethis_InternallinkService
- * @package sharethis
+ * @package modules.sharethis
+ * @method sharethis_InternallinkService getInstance()
  */
 class sharethis_InternallinkService extends sharethis_LinkService
 {
-	/**
-	 * @var sharethis_InternallinkService
-	 */
-	private static $instance;
-
-	/**
-	 * @return sharethis_InternallinkService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return sharethis_persistentdocument_internallink
 	 */
@@ -38,7 +21,7 @@ class sharethis_InternallinkService extends sharethis_LinkService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/internallink');
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/internallink');
 	}
 	
 	/**
@@ -49,15 +32,15 @@ class sharethis_InternallinkService extends sharethis_LinkService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/internallink', false);
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/internallink', false);
 	}
 
 	/**
 	 * @param sharethis_persistentdocument_internallink $document
-	 * @param String $url
-	 * @param String $title
-	 * @param String $varSeparator
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $varSeparator
+	 * @return string
 	 */
 	public function getShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
@@ -66,10 +49,10 @@ class sharethis_InternallinkService extends sharethis_LinkService
 	
 	/**
 	 * @param sharethis_persistentdocument_internallink $document
-	 * @param String $url
-	 * @param String $title
-	 * @param String $varSeparator
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $varSeparator
+	 * @return string
 	 */
 	protected function generateShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
@@ -111,9 +94,9 @@ class sharethis_InternallinkService extends sharethis_LinkService
 	
 	/**
 	 * @param sharethis_persistentdocument_internallink $document
-	 * @param String $url
-	 * @param String $title
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @return string
 	 */
 	public function getShareOnclick($document, $url, $title)
 	{

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18n baseKey="m.sharethis.bo.blocks.googleplus" lcid="fr_FR">
+	<key id="title">Google+1</key>
+	<key id="annotation">Annotation</key>
+	<key id="annotation-help">Annotation</key>
+	<key id="size">Taille</key>
+	<key id="size-help">Taille</key>
+</i18n>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<tags extends="generic">
-	<tag labeli18n="m.sharethis.bo.tags.send-email" icon="mail">contextual_website_website_modules_sharethis_send-email</tag>
+<?xml version="1.0" encoding="UTF-8"?>
+<tags>
+	<tag icon="mail" labeli18n="m.sharethis.bo.tags.send-email">contextual_website_website_modules_sharethis_send-email</tag>
 </tags>

@@ -5,15 +5,15 @@
  */
 class sharethis_GroupScriptDocumentElement extends import_ScriptDocumentElement
 {
-    /**
-     * @return sharethis_persistentdocument_group
-     */
-    protected function initPersistentDocument()
-    {
-    	return sharethis_GroupService::getInstance()->getNewDocumentInstance();
-    }
-    
-    /**
+	/**
+	 * @return sharethis_persistentdocument_group
+	 */
+	protected function initPersistentDocument()
+	{
+		return sharethis_GroupService::getInstance()->getNewDocumentInstance();
+	}
+	
+	/**
 	 * @return f_persistentdocument_PersistentDocumentModel
 	 */
 	protected function getDocumentModel()

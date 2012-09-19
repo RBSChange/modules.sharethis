@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.sharethis.document.blogsite" lcid="en_GB">
-  <include id="m.sharethis.document.link"/>
-  <key id="document-name">"blog" website</key>
-  <key id="submiturl">submission URL</key>
-  <key id="submiturl-help">URL through which the message can be submitted. This URL will be automatically completed in order to transmit the data to the page.</key>
-  <key id="messagename">message parameter</key>
-  <key id="messagename-help">Name of the URL parameter containing the message.</key>
-  <key id="messagepattern">message pattern</key>
-  <key id="messagepattern-help">Model on which the message will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
+	<include id="m.sharethis.document.link" />
+	<key id="document-name">"blog" website</key>
+	<key id="submiturl">submission URL</key>
+	<key id="submiturl-help">URL through which the message can be submitted. This URL will be automatically completed in order to transmit the data to the page.</key>
+	<key id="messagename">message parameter</key>
+	<key id="messagename-help">Name of the URL parameter containing the message.</key>
+	<key id="messagepattern">message pattern</key>
+	<key id="messagepattern-help">Model on which the message will be built. Two parameters are available: {PAGE_TITLE} and {PAGE_URL}.</key>
 </i18n>

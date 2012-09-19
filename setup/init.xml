@@ -3,7 +3,46 @@
 	<binding fileName="modules/sharethis/persistentdocument/import/sharethis_binding.xml" />
 	<binding fileName="modules/media/persistentdocument/import/media_binding.xml" />
 	<binding fileName="modules/notification/persistentdocument/import/notification_binding.xml" />
-	
+	<binding fileName="modules/list/persistentdocument/import/list_binding.xml" />
+	<systemfolder module="list" relatedmodule="sharethis">
+		<staticlist listid="modules_sharethis/pinitcountlayout" label="Pinterest button" description="Pinterest button layout">
+			<staticitem value="horizontal" label="m.sharethis.bo.general.pinit-layout-horizontal" />
+			<staticitem value="vertical" label="m.sharethis.bo.general.pinit-layout-vertical" />
+			<staticitem value="none" label="m.sharethis.bo.general.pinit-layout-none" />
+		</staticlist>
+		<staticlist listid="modules_sharethis/googleplusannotation" label="Google Plus Annotation" description="Google Plus Annotation">
+			<staticitem value="none" label="m.sharethis.bo.general.googleplus-annotation-none" />
+			<staticitem value="bubble" label="m.sharethis.bo.general.googleplus-annotation-bubble" />
+			<staticitem value="inline" label="m.sharethis.bo.general.googleplus-annotation-inline" />
+		</staticlist>
+		<staticlist listid="modules_sharethis/googleplussize" label="Google Plus Size" description="Google Plus Size">
+			<staticitem value="small" label="m.sharethis.bo.general.googleplus-size-small" />
+			<staticitem value="medium" label="m.sharethis.bo.general.googleplus-size-medium" />
+			<staticitem value="standard" label="m.sharethis.bo.general.googleplus-size-standard" />
+			<staticitem value="tall" label="m.sharethis.bo.general.googleplus-size-tall" />
+		</staticlist>
+		<staticlist listid="modules_sharethis/facebooklikeverb" label="Facebook like verb" description="Facebook like verb">
+			<staticitem value="like" label="m.sharethis.bo.general.facebooklike-verb-like" />
+			<staticitem value="recommend" label="m.sharethis.bo.general.facebooklike-verb-recommend" />
+		</staticlist>
+		<staticlist listid="modules_sharethis/facebooklikecolorscheme" label="Facebook like color scheme" description="Facebook like color scheme">
+			<staticitem value="light" label="light" />
+			<staticitem value="dark" label="dark" />
+		</staticlist>
+		<staticlist listid="modules_sharethis/facebooklikefont" label="Facebook like font" description="Facebook like font">
+			<staticitem value="arial" label="arial" />
+			<staticitem value="lucida grande" label="lucida grande" />
+			<staticitem value="segoe ui" label="segoe ui" />
+			<staticitem value="tahoma" label="tahoma" />
+			<staticitem value="trebuchet ms" label="trebuchet ms" />
+			<staticitem value="verdana" label="verdana" />
+		</staticlist>
+		<staticlist listid="modules_sharethis/facebooklikelayout" label="Facebook like layout" description="Facebook like layout">
+			<staticitem value="standard" label="m.sharethis.bo.general.facebooklike-layout-standard" />
+			<staticitem value="button_count" label="m.sharethis.bo.general.facebooklike-layout-buttoncount" />
+			<staticitem value="box_count" label="m.sharethis.bo.general.facebooklike-layout-boxcount" />
+		</staticlist>
+	</systemfolder>
 	<systemfolder module="media" relatedmodule="sharethis">
 		<media path="modules/sharethis/setup/icons/digg_16x16.png" byLabel="Digg" label="Digg" id="icon1" />
 		<media path="modules/sharethis/setup/icons/facebook_16x16.png" byLabel="Facebook" label="Facebook" id="icon2" />
@@ -14,66 +53,33 @@
 		<media path="modules/sharethis/setup/icons/print_16x16.png" byLabel="Imprimer" label="Imprimer" id="icon7" />
 		<media path="modules/sharethis/setup/icons/email_16x16.png" byLabel="Envoyer par e-mail" label="Envoyer par e-mail" id="icon8" />
 	</systemfolder>
-	
 	<rootfolder module="sharethis">
 		<bookmarksite byLabel="Digg" submitUrl="http://digg.com/submit?" urlName="url" titleName="title" descriptionName="bodytext" icon-refid="icon1" id="digg" />
 		<bookmarksite byLabel="Facebook" submitUrl="http://www.facebook.com/share.php?" urlName="u" titleName="t" icon-refid="icon2" id="facebook" />
 		<bookmarksite byLabel="Delicious" submitUrl="http://del.icio.us/posts?" urlName="url" titleName="title" descriptionName="notes" icon-refid="icon3" id="delicious" />
 		<bookmarksite byLabel="Google" submitUrl="http://www.google.com/bookmarks/mark?op=edit&amp;" urlName="bkmk" titleName="title" descriptionName="annotation" icon-refid="icon4" id="google" />
-		
 		<blogsite byLabel="Twitter" submitUrl="http://twitter.com/intent/tweet/?" messageName="status" messagePattern="{PAGE_TITLE} : {PAGE_URL}" shortenUrls="true" icon-refid="icon5" id="twitter" />
-		
 		<internallink byLabel="Ajouter aux favoris" pageTag="contextual_website_website_favorite" onclickPattern="accessibleAddToFavorite(this); return false;" icon-refid="icon6" id="favorite" />
 		<internallink byLabel="Imprimer" pageTag="contextual_website_website_print" onclickPattern="accessiblePrint(this); return false;" icon-refid="icon7" id="print" />
 		<internallink byLabel="Envoyer par e-mail" pageTag="contextual_website_website_modules_sharethis_send-email" messageName="formParam[message]" messagePattern="{PAGE_TITLE} : {PAGE_URL}" icon-refid="icon8" id="email" />
-		
 		<group byCode="default" label="Groupe de liens par défaut" links-refids="digg,facebook,delicious,google,twitter,email" />
 		<group byCode="currentpage" label="Bloc de partage de la page courante" links-refids="digg,facebook,delicious,google,twitter,favorite,print,email" />
 	</rootfolder>
-		
 	<systemfolder module="notification" relatedmodule="sharethis">
-		<notification
-			label="Partager un lien"
-			codename="modules_sharethis/sendmail"
-			template="default"
-			subject="{name} souhaite partager un lien avec vous"
-			body="&lt;p&gt;Bonjour {friendname},&lt;/p&gt;&lt;p&gt;{name} ( {email} ) souhaite partager un lien avec vous et vous adresse ce message :&lt;/p&gt;&lt;p&gt;{message}&lt;/p&gt;" 
-			id="notif1"	/>
+		<notification label="Partager un lien" codename="modules_sharethis/sendmail" template="default" subject="{name} souhaite partager un lien avec vous" body="&lt;p&gt;Bonjour {friendname},&lt;/p&gt;&lt;p&gt;{name} ( {email} ) souhaite partager un lien avec vous et vous adresse ce message :&lt;/p&gt;&lt;p&gt;{message}&lt;/p&gt;" id="notif1" />
 	</systemfolder>
-	
 	<systemfolder module="form" relatedmodule="sharethis">
 		<binding fileName="modules/form/persistentdocument/import/form_binding.xml" />
-		<form formid="modules_sharethis/sendmail" label="Partager un lien" 
-			description="Pour partager ce lien, veuillez remplir le formulaire ci-dessous. Tous les champs sont obligatoires."
-			submitButton="Envoyer" confirmMessage="Votre message a bien été envoyé. Nous vous remercions de l'intérêt que vous portez à ce site."
-			markup="default" useBackLink="true" useCaptcha="true" notification-refid="notif1" messageSendingType="1">
-
-			<fieldhidden fieldName="linkTitle" label="Titre du lien" required="true" />
-			<fieldhidden fieldName="linkUrl" label="URL du lien" required="true" />
-			
+		<form formid="modules_sharethis/sendmail" label="Partager un lien" description="Pour partager ce lien, veuillez remplir le formulaire ci-dessous. Tous les champs sont obligatoires." submitButton="Envoyer" confirmMessage="Votre message a bien été envoyé. Nous vous remercions de l'intérêt que vous portez à ce site." markup="default" useBackLink="true" useCaptcha="true" notification-refid="notif1">
 			<group label="Vous">
-				<fieldtext fieldName="name" label="Nom" 
-					required="true" multiline="false" cols="50" maxlength="255"
-					validators="blank:false;maxSize:255" />		
-						
-				<fieldtext fieldName="email" label="Adresse e-mail" 
-					required="true" multiline="false" cols="50" maxlength="255"
-					validators="blank:false;maxSize:255;minSize:0;email:true" />							
+				<fieldtext fieldName="name" label="Nom" required="true" multiline="false" cols="50" maxlength="255" validators="blank:false;maxSize:255" />
+				<fieldtext fieldName="email" label="Adresse e-mail" required="true" multiline="false" cols="50" maxlength="255" validators="blank:false;maxSize:255;minSize:0;email:true" />
 			</group>
-
 			<group label="Le destinataire">
-				<fieldtext fieldName="friendname" label="Nom" 
-					required="true" multiline="false" cols="50" maxlength="255"
-					validators="blank:false;maxSize:255" />	
-						
-				<fieldtext fieldName="receiverIds" label="Adresse e-mail" 
-					required="true" multiline="false" cols="50" maxlength="255"
-					validators="blank:false;maxSize:255;minSize:0;email:true" />
-					
-				<fieldtext fieldName="message" label="Message" 
-					required="true" multiline="true" cols="50" rows="10" maxlength="8192"
-					validators="blank:false;maxSize:8192" />																						
-			</group>			
-		</form>	
+				<fieldtext fieldName="friendname" label="Nom" required="true" multiline="false" cols="50" maxlength="255" validators="blank:false;maxSize:255" />
+				<fieldtext fieldName="receiverIds" label="Adresse e-mail" required="true" multiline="false" cols="50" maxlength="255" validators="blank:false;maxSize:255;minSize:0;email:true" />
+				<fieldtext fieldName="message" label="Message" required="true" multiline="true" cols="50" rows="10" maxlength="8192" validators="blank:false;maxSize:8192" />
+			</group>
+		</form>
 	</systemfolder>
 </script>

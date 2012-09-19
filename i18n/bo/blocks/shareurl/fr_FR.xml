@@ -1,4 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.sharethis.bo.blocks.shareurl" lcid="fr_FR">
-  <key id="title">Shareurl</key>
+	<key id="block-title">partager une URL</key>
+	<key id="groupcode">groupe de liens</key>
+	<key id="groupcode-help">Code du groupe de liens à utiliser pour le partage.</key>
+	<key id="url">URL à partager</key>
+	<key id="title">titre de l'URL</key>
+	<key id="title-help">Titre fourni aux liens pour générer l'URL de partage.</key>
 </i18n>

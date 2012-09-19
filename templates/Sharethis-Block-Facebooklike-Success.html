@@ -1,0 +1,9 @@
+<div class="fb-like"
+	data-ref="${configuration/getRef}"
+	data-send="${php: f_util_Convert::toString(configuration.getSend())}" 
+	data-action="${configuration/getVerb}" 
+	data-colorscheme="${configuration/getColorScheme}" 
+	data-width="${configuration/getBlockwidth}" 
+	data-font="${configuration/getFont}"
+	data-layout="${configuration/getLayout}"
+	data-show-faces="${php: f_util_Convert::toString(configuration.getShowfaces())}"></div>	

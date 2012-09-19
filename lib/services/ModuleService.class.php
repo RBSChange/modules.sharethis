@@ -1,24 +1,8 @@
 <?php
 /**
- * @package modules.sharethis.lib.services
+ * @package modules.sharethis
+ * @method sharethis_ModuleService getInstance()
  */
 class sharethis_ModuleService extends ModuleBaseService
 {
-	/**
-	 * Singleton
-	 * @var sharethis_ModuleService
-	 */
-	private static $instance = null;
-
-	/**
-	 * @return sharethis_ModuleService
-	 */
-	public static function getInstance()
-	{
-		if (is_null(self::$instance))
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
 }

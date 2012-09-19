@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.sharethis.document.link" lcid="fr_FR">
 	<key id="label">libellé</key>
 	<key id="label-help">Libellé du lien interne, utilisé dans l'interface d'administration uniquement.</key>

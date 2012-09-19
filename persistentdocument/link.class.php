@@ -6,9 +6,9 @@
 class sharethis_persistentdocument_link extends sharethis_persistentdocument_linkbase
 {
 	/**
-	 * @param String $url
-	 * @param String $title
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @return string
 	 */
 	public function getShareUrlIndirection($url, $title)
 	{
@@ -16,10 +16,10 @@ class sharethis_persistentdocument_link extends sharethis_persistentdocument_lin
 	}
 	
 	/**
-	 * @param String $url
-	 * @param String $title
-	 * @param String $title
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $title
+	 * @return string
 	 */
 	public function getShareUrl($url, $title, $varSeparator = '&amp;')
 	{
@@ -27,9 +27,9 @@ class sharethis_persistentdocument_link extends sharethis_persistentdocument_lin
 	}
 	
 	/**
-	 * @param String $url
-	 * @param String $title
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @return string
 	 */
 	public function getShareOnclick($url, $title)
 	{

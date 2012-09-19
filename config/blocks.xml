@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <blocks>
-	<block type="modules_sharethis_sharepage" icon="sharethis" labeli18n="m.sharethis.bo.blocks.sharepage"
-		afterAll="true" cache="true" cache-deps="[modules_sharethis/link]">
+	<block type="modules_sharethis_sharepage" icon="sharethis" afterAll="true" cache="true" cache-deps="[modules_sharethis/link]">
 		<parameters>
 			<parameter name="groupCode" type="String" default-value="currentpage" />
 		</parameters>
 	</block>
-	<block type="modules_sharethis_Shareurl" icon="sharethis"
-		cache="true" cache-deps="[modules_sharethis/link]">
+	<block type="modules_sharethis_Shareurl" icon="sharethis" cache="true" cache-deps="[modules_sharethis/link]" labeli18n="m.sharethis.bo.blocks.shareurl.block-title">
 		<parameters>
 			<parameter name="groupCode" type="String" default-value="default" />
 			<parameter name="url" type="String" min-occurs="1" />
 			<parameter name="title" type="String" min-occurs="1" />
+		</parameters>
+	</block>
+	<block type="modules_sharethis_Pinit" icon="sharethis">
+		<parameters>
+			<parameter name="countlayout" type="String" default-value="horizontal" from-list="modules_sharethis/pinitcountlayout" />
+		</parameters>
+	</block>
+	<block type="modules_sharethis_Googleplus" icon="sharethis">
+		<parameters>
+			<parameter name="annotation" type="String" default-value="bubble" from-list="modules_sharethis/googleplusannotation" />
+			<parameter name="size" type="String" default-value="standard" from-list="modules_sharethis/googleplussize" />
+		</parameters>
+	</block>
+	<block type="modules_sharethis_Facebooklike" icon="sharethis">
+		<parameters>
+			<parameter name="appId" type="String" default-value="" />
+			<parameter name="ref" type="String" default-value="" />
+			<parameter name="send" type="Boolean" default-value="true" />
+			<parameter name="showfaces" type="Boolean" default-value="true" />
+			<parameter name="blockwidth" type="Integer" default-value="450" />
+			<parameter name="verb" type="String" default-value="like" from-list="modules_sharethis/facebooklikeverb" />
+			<parameter name="colorscheme" type="String" default-value="light" from-list="modules_sharethis/facebooklikecolorscheme" />
+			<parameter name="font" type="String" default-value="lucida grande" from-list="modules_sharethis/facebooklikefont" />
+			<parameter name="layout" type="String" default-value="standard" from-list="modules_sharethis/facebooklikelayout" />
 		</parameters>
 	</block>
 </blocks>

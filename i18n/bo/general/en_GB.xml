@@ -1,6 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.sharethis.bo.general" lcid="en_GB">
-  <key id="module-name">link sharing</key>
-  <key id="tree-root-name">link sharing</key>
-  <key id="system-folder-name">link sharing</key>
+	<key id="module-name">link sharing</key>
+	<key id="tree-root-name">link sharing</key>
+	<key id="system-folder-name">link sharing</key>
+	<!-- Google +1 -->
+	<key id="googleplus-annotation-none">none</key>
+	<key id="googleplus-annotation-bubble">bubble</key>
+	<key id="googleplus-annotation-inline">inline</key>
+	<key id="googleplus-size-small">small</key>
+	<key id="googleplus-size-medium">medium</key>
+	<key id="googleplus-size-standard">standard</key>
+	<key id="googleplus-size-tall">tall</key>
+	<!-- Pin It -->
+	<key id="pinit-layout-horizontal">horizontal</key>
+	<key id="pinit-layout-vertical">vertical</key>
+	<key id="pinit-layout-none">none</key>
 </i18n>

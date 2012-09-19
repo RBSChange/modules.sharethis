@@ -1,27 +1,10 @@
 <?php
 /**
- * sharethis_BookmarksiteService
- * @package sharethis
+ * @package modules.sharethis
+ * @method sharethis_BookmarksiteService getInstance()
  */
 class sharethis_BookmarksiteService extends sharethis_SiteService
 {
-	/**
-	 * @var sharethis_BookmarksiteService
-	 */
-	private static $instance;
-
-	/**
-	 * @return sharethis_BookmarksiteService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return sharethis_persistentdocument_bookmarksite
 	 */
@@ -38,7 +21,7 @@ class sharethis_BookmarksiteService extends sharethis_SiteService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/bookmarksite');
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/bookmarksite');
 	}
 	
 	/**
@@ -49,15 +32,15 @@ class sharethis_BookmarksiteService extends sharethis_SiteService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/bookmarksite', false);
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/bookmarksite', false);
 	}
 	
 	/**
 	 * @param sharethis_persistentdocument_bookmarksite $document
-	 * @param String $url
-	 * @param String $title
-	 * @param String $varSeparator
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $varSeparator
+	 * @return string
 	 */
 	protected function generateShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{

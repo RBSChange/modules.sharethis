@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <script>
-  <binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml"/>
-  <actiondef modulename="sharethis" actionname="reactivate.blogsite" label="modules.sharethis.bo.useractionlogger.reactivate-blogsite"/>
-  <actiondef modulename="sharethis" actionname="insert.folder" label="m.sharethis.bo.useractionlogger.insert-folder"/>
-  <actiondef modulename="sharethis" actionname="move.bookmarksite" label="m.sharethis.bo.useractionlogger.move-bookmarksite"/>
-  <actiondef modulename="sharethis" actionname="move.blogsite" label="m.sharethis.bo.useractionlogger.move-blogsite"/>
-  <actiondef modulename="sharethis" actionname="move.internallink" label="m.sharethis.bo.useractionlogger.move-internallink"/>
-  <actiondef modulename="sharethis" actionname="move.group" label="m.sharethis.bo.useractionlogger.move-group"/>
-  <actiondef modulename="sharethis" actionname="insert.group" label="m.sharethis.bo.useractionlogger.insert-group"/>
+	<binding fileName="modules/useractionlogger/persistentdocument/import/useractionlogger_binding.xml" />
+	<actiondef modulename="sharethis" actionname="reactivate.blogsite" label="modules.sharethis.bo.useractionlogger.reactivate-blogsite" />
+	<actiondef modulename="sharethis" actionname="update.group" label="m.sharethis.bo.useractionlogger.update-group" />
+	<actiondef modulename="sharethis" actionname="insert.folder" label="m.sharethis.bo.useractionlogger.insert-folder" />
+	<actiondef modulename="sharethis" actionname="move.bookmarksite" label="m.sharethis.bo.useractionlogger.move-bookmarksite" />
+	<actiondef modulename="sharethis" actionname="move.blogsite" label="m.sharethis.bo.useractionlogger.move-blogsite" />
+	<actiondef modulename="sharethis" actionname="move.internallink" label="m.sharethis.bo.useractionlogger.move-internallink" />
+	<actiondef modulename="sharethis" actionname="move.group" label="m.sharethis.bo.useractionlogger.move-group" />
+	<actiondef modulename="sharethis" actionname="insert.group" label="m.sharethis.bo.useractionlogger.insert-group" />
 </script>

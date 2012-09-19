@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18n baseKey="m.sharethis.bo.blocks.pinit" lcid="fr_FR">
+	<key id="title">Pin-It (pinterest)</key>
+	<key id="countlayout">Compteur</key>
+	<key id="countlayout-help">Compteur</key>
+</i18n>

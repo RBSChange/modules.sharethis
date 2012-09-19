@@ -1,27 +1,10 @@
 <?php
 /**
- * sharethis_SiteService
- * @package sharethis
+ * @package modules.sharethis
+ * @method sharethis_SiteService getInstance()
  */
 class sharethis_SiteService extends sharethis_LinkService
 {
-	/**
-	 * @var sharethis_SiteService
-	 */
-	private static $instance;
-
-	/**
-	 * @return sharethis_SiteService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return sharethis_persistentdocument_site
 	 */
@@ -38,7 +21,7 @@ class sharethis_SiteService extends sharethis_LinkService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/site');
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/site');
 	}
 	
 	/**
@@ -49,15 +32,15 @@ class sharethis_SiteService extends sharethis_LinkService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/site', false);
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/site', false);
 	}
 
 	/**
 	 * @param sharethis_persistentdocument_site $document
-	 * @param String $url
-	 * @param String $title
-	 * @param String $varSeparator
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $varSeparator
+	 * @return string
 	 */
 	public function getShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{
@@ -70,10 +53,10 @@ class sharethis_SiteService extends sharethis_LinkService
 	
 	/**
 	 * @param sharethis_persistentdocument_site $document
-	 * @param String $url
-	 * @param String $title
-	 * @param String $varSeparator
-	 * @return String
+	 * @param string $url
+	 * @param string $title
+	 * @param string $varSeparator
+	 * @return string
 	 */
 	protected function generateShareUrl($document, $url, $title, $varSeparator = '&amp;')
 	{

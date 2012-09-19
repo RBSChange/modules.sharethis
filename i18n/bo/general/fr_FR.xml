@@ -1,6 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <i18n baseKey="m.sharethis.bo.general" lcid="fr_FR">
-  <key id="module-name">partage de liens</key>
-  <key id="tree-root-name">partage de liens</key>
-  <key id="system-folder-name">partage de liens</key>
+	<key id="module-name">partage de liens</key>
+	<key id="tree-root-name">partage de liens</key>
+	<key id="system-folder-name">partage de liens</key>
+	<!-- Google +1 -->
+	<key id="googleplus-annotation-none">aucune</key>
+	<key id="googleplus-annotation-bubble">info-bulle</key>
+	<key id="googleplus-annotation-inline">intégrée</key>
+	<key id="googleplus-size-small">petit</key>
+	<key id="googleplus-size-medium">moyen</key>
+	<key id="googleplus-size-standard">standard</key>
+	<key id="googleplus-size-tall">grand</key>
+	<!-- Pin It -->
+	<key id="pinit-layout-horizontal">horizontal</key>
+	<key id="pinit-layout-vertical">vertical</key>
+	<key id="pinit-layout-none">aucun</key>
+	<!-- Facebook like -->
+	<key id="facebooklike-verb-like">j'aime</key>
+	<key id="facebooklike-verb-recommend">recommender</key>
+	<key id="facebooklike-layout-standard">standard</key>
+	<key id="facebooklike-layout-buttoncount">"button count"</key>
+	<key id="facebooklike-layout-boxcount">"box count"</key>
 </i18n>

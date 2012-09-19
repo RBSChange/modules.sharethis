@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<i18n baseKey="m.sharethis.bo.blocks.sharepage" lcid="fr_FR">
+	<key id="title">partager la page</key>
+	<key id="groupcode">groupe de liens</key>
+	<key id="groupcode-help">code du groupe de liens à utiliser pour le partage</key>
+</i18n>

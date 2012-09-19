@@ -1,27 +1,10 @@
 <?php
 /**
- * sharethis_GroupService
  * @package modules.sharethis
+ * @method sharethis_GroupService getInstance()
  */
 class sharethis_GroupService extends f_persistentdocument_DocumentService
 {
-	/**
-	 * @var sharethis_GroupService
-	 */
-	private static $instance;
-
-	/**
-	 * @return sharethis_GroupService
-	 */
-	public static function getInstance()
-	{
-		if (self::$instance === null)
-		{
-			self::$instance = new self();
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * @return sharethis_persistentdocument_group
 	 */
@@ -38,7 +21,7 @@ class sharethis_GroupService extends f_persistentdocument_DocumentService
 	 */
 	public function createQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/group');
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/group');
 	}
 	
 	/**
@@ -49,7 +32,7 @@ class sharethis_GroupService extends f_persistentdocument_DocumentService
 	 */
 	public function createStrictQuery()
 	{
-		return $this->pp->createQuery('modules_sharethis/group', false);
+		return $this->getPersistentProvider()->createQuery('modules_sharethis/group', false);
 	}
 	
 	/**
